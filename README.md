@@ -58,4 +58,4 @@ Original template files and design by [@ajlkn](https://twitter.com/ajlkn)
 
 # Copyright & License
 
-Copyright (c) 2013-2018 HTML5 UP & Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2018 HTML5 UP & Ghost Foundation - This theme is licensed under both the [MIT and Creative Commons Attribution 3.0](LICENSE). Please note that the terms of the Creative Commons license require that you maintain the footer attribution to freely use this theme.
