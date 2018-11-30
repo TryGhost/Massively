@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+    <noscript><link rel="stylesheet" href="{{asset "css/noscript.css"}}" /></noscript>
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body class="is-preload {{body_class}}">
+
+    <div id="wrapper" {{#is "home"}}class="fade-in"{{/is}}>
+
+        {{!-- Intro --}}
+        {{#is "home"}}
+        <div id="intro">
+            <h1>{{@blog.title}}</h1>
+            <p>{{@blog.description}}</p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
+        {{/is}}
+
+        {{!-- Header --}}
+        <header id="header">
+            <a href="{{@blog.url}}" class="logo">{{@blog.title}}</a>
+        </header>
+
+        {{!-- Nav --}}
+        {{#if @blog.navigation}}
+        {{navigation}}
+        {{/if}}
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+
+        {{!-- The footer at the very bottom of the screen --}}
+        <div id="copyright">
+            <ul>
+                <li>&copy; {{@blog.title}}</li>
+                <li>Design by <a href="https://html5up.net">HTML5 UP</a></li>
+                <li>Published with <a href="https://ghost.org">Ghost</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    {{!-- Theme Scripts --}}
+    <script src="{{asset "js/jquery.min.js"}}"></script>
+    <script src="{{asset "js/jquery.scrollex.min.js"}}"></script>
+    <script src="{{asset "js/jquery.scrolly.min.js"}}"></script>
+    <script src="{{asset "js/browser.min.js"}}"></script>
+    <script src="{{asset "js/breakpoints.min.js"}}"></script>
+    <script src="{{asset "js/util.js"}}"></script>
+    <script src="{{asset "js/main.js"}}"></script>
+
+    {{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
+    it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
+
+</body>
+</html>

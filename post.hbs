@@ -1,0 +1,61 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{#post}}
+{{!-- Everything inside the #post tags pulls data from the post --}}
+
+<main id="main">
+
+    <section class="post">
+
+        <header class="major">
+            <span class="date">{{date format="MMMM D, YYYY"}}</span>
+            <h1>{{title}}</h1>
+            {{#if custom_excerpt}}
+                <p>{{custom_excerpt}}</p>
+            {{/if}}
+        </header>
+
+        {{#if feature_image}}
+        <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
+        {{/if}}
+
+        <div class="content">
+            {{content}}
+        </div>
+
+        {{!-- Email subscribe form at the bottom of the page --}}
+        {{#if @labs.subscribers}}
+        <section class="subscribe-form">
+            <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
+            <p>Get the latest posts delivered right to your inbox</p>
+            {{subscribe_form placeholder="youremail@example.com"}}
+        </section>
+        {{/if}}
+
+        <footer class="post-full-footer">
+
+            {{!-- There are two options for how we display the byline/author-info.
+            If the post has more than one author, we load a specific template
+            from includes/byline-multiple.hbs, otherwise, we just use the
+            default byline. --}}
+
+            {{#has author="count:>1"}}
+            {{> "byline-multiple"}}
+            {{else}}
+            {{> "byline-single"}}
+            {{/has}}
+
+        </footer>
+
+        {{!--
+        <section class="post-full-comments">
+            If you want to embed comments, this is a good place to do it!
+        </section>
+        --}}
+    </section>
+
+</main>
+
+{{/post}}
