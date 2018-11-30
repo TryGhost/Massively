@@ -44,6 +44,7 @@
         "gulp": "3.9.1",
         "gulp-livereload": "3.8.1",
         "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.4",
         "gulp-uglify": "3.0.1",
         "gulp-watch": "4.3.8",
         "gulp-zip": "4.0.0",

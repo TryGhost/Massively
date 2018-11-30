@@ -1,10 +1,14 @@
 # Massively
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+This is Massively, a text-heavy, article-oriented design built around a huge background
+image and scroll effects powered by Scrollex. Originally created by [@ajlkn](https://twitter.com/ajlkn) for [HTML5 UP](https://html5up.net) and later ported to [Ghost](https://ghost.org)
+
+**Demo: https://massively.ghost.io**
 
 &nbsp;
 
-![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
+![image](https://user-images.githubusercontent.com/120485/49293031-7276b000-f4e1-11e8-8b71-43dc53c67f00.png)
+
 
 &nbsp;
 
@@ -23,44 +27,35 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 - `tag.hbs` - Used for tag archives
 - `author.hbs` - Used for author archives
 
-One really neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
+One neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
 
 - `page-about.hbs` - Custom template for the `/about/` page
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
 - `author-ali.hbs` - Custom template for `/author/ali/` archive
 
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
+# Development
 
-This is Massively, a text-heavy, article-oriented design built around a huge background
-image (with a new parallax implementation I'm testing) and scroll effects (powered by
-Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
-that fulfills a few user requests and makes use of some new techniques I've been wanting
-to try out. Enjoy it :)
+This implementation tries to stay as true as possible to the original template without making too many modifications. The original code is unmodified, preserving the ability to update it later.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+There are two main changes compared to the original template files:
 
-(* = not included)
+- The original template contained separate `/assets` and `/images` directories. Ghost Themes require that all assets be nested under a top-level `/assets` directory, so these are moved to `/assets/main` and `/assets/images`, respectively.
+- In order to make minor modifications and add some new custom styles, one additional SaSS file is added under `/assets/main/sass/layout/ghost.sass` and included at the bottom of the `main.sass` file.
 
-AJ
-aj@lkn.io | @ajlkn
+To work on styles in this theme, you'll need to run a local development environment to build/watch for changes. Once cloned and installed with npm/yarn, the following `gulp` build tasks are available:
 
+```bash
+# Build files locally and watch for changes
+gulp
 
-Credits:
+# Build production zip locally and save to /dist
+gulp zip
+```
 
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+Original template files and design by [@ajlkn](https://twitter.com/ajlkn)
 
 
 # Copyright & License
 
-Copyright (c) 2013-2018 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2018 HTML5 UP & Ghost Foundation - Released under the [MIT license](LICENSE).

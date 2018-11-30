@@ -12,11 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
-    <noscript><link rel="stylesheet" href="{{asset "css/noscript.css"}}" /></noscript>
+    <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}" />
+    <noscript><link rel="stylesheet" href="{{asset "main/css/noscript.css"}}" /></noscript>
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
+
+    {{#if @blog.cover_image}}
+    <style>#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}),linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @blog.cover_image}}") }</style>
+    {{/if}}
 
 </head>
 <body class="is-preload {{body_class}}">
@@ -36,12 +40,16 @@
 
         {{!-- Header --}}
         <header id="header">
-            <a href="{{@blog.url}}" class="logo">{{@blog.title}}</a>
+            {{#if @blog.logo}}
+                <a href="{{@blog.url}}" class="logo image"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+            {{else}}
+                <a href="{{@blog.url}}" class="logo">{{@blog.title}}</a>
+            {{/if}}
         </header>
 
         {{!-- Nav --}}
         {{#if @blog.navigation}}
-        {{navigation}}
+            {{navigation}}
         {{/if}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
@@ -60,13 +68,13 @@
 
 
     {{!-- Theme Scripts --}}
-    <script src="{{asset "js/jquery.min.js"}}"></script>
-    <script src="{{asset "js/jquery.scrollex.min.js"}}"></script>
-    <script src="{{asset "js/jquery.scrolly.min.js"}}"></script>
-    <script src="{{asset "js/browser.min.js"}}"></script>
-    <script src="{{asset "js/breakpoints.min.js"}}"></script>
-    <script src="{{asset "js/util.js"}}"></script>
-    <script src="{{asset "js/main.js"}}"></script>
+    <script src="{{asset "main/js/jquery.min.js"}}"></script>
+    <script src="{{asset "main/js/jquery.scrollex.min.js"}}"></script>
+    <script src="{{asset "main/js/jquery.scrolly.min.js"}}"></script>
+    <script src="{{asset "main/js/browser.min.js"}}"></script>
+    <script src="{{asset "main/js/breakpoints.min.js"}}"></script>
+    <script src="{{asset "main/js/util.js"}}"></script>
+    <script src="{{asset "main/js/main.js"}}"></script>
 
     {{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
     it should always be the very last thing before the closing body tag --}}

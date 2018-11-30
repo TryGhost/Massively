@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var livereload = require('gulp-livereload');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var zip = require('gulp-zip');
 
 var swallowError = function swallowError(error) {
@@ -25,14 +26,16 @@ gulp.task('build', ['css'], function (/* cb */) {
 gulp.task('generate', ['css']);
 
 gulp.task('css', function () {
-    return gulp.src('./assets/sass/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('assets/css2/'))
+    return gulp.src('./assets/main/sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('assets/main/css/'))
         .pipe(livereload());
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./assets/sass/**', ['css']);
+    gulp.watch('./assets/main/sass/**/**', ['css']);
 });
 
 gulp.task('zip', ['css'], function () {

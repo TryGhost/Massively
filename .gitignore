@@ -17,6 +17,7 @@ package-lock.json
 
 .idea/*
 *.iml
+*.map
 projectFilesBackup
 
 .DS_Store
