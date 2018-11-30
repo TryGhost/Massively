@@ -1,0 +1,17 @@
+{{#is "paged"}}
+<footer>
+    <nav class="pagination" role="navigation">
+        {{#if prev}}
+        <a class="page previous newer-posts" href="{{page_url prev}}">Newer Posts</a>
+        {{else}}
+        <div class="spacer"></div>
+        {{/if}}
+        <span class="page-number">Page {{page}} of {{pages}}</span>
+        {{#if next}}
+        <a class="page next older-posts" href="{{page_url next}}">Older Posts</a>
+        {{else}}
+        <div class="spacer"></div>
+        {{/if}}
+    </nav>
+</footer>
+{{/is}}

@@ -1,0 +1,105 @@
+// Main
+// --------------------------------------------
+
+// Fix main cover image bg position
+#wrapper>.bg {
+    background-position: top center;
+    background-size: cover;
+}
+
+#intro {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#header .logo.image {
+    padding: 0;
+    border: none;
+}
+
+#header .logo.image img {
+    height: 75px;
+    transform: none !important;
+}
+
+// Pagination
+// --------------------------------------------
+
+// Couple of alignment fixes cause we're not
+// using page numbers, just prev/next
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.page-number {
+    padding: 0 20px;
+    border-color: transparent !important;
+    color: #222 !important;;
+}
+
+.spacer {
+    width: 160px;
+}
+
+// Content
+// --------------------------------------------
+
+// Adjustment for line length
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+// Tags
+// --------------------------------------------
+
+.tag-header,
+.tag-header p {
+    text-align: center;
+}
+
+
+// Authors
+// --------------------------------------------
+
+.author-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author-profile-image {
+    flex-shrink: 0;
+    margin: 0 0 20px 0;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    display: block;
+    background: #222;
+    border-radius: 100%;
+
+    object-fit: cover;
+}
+
+.author-header h1 {
+    margin-bottom: 1rem;
+}
+
+.author-meta {
+    display: flex;
+    align-items: center;
+}
+
+.author-meta .icon,
+.author-meta .bull {
+    padding: 5px 10px;
+}
+
+.author-location:before {
+    margin-right: 10px;
+}
+
