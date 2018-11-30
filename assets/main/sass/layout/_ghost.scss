@@ -22,6 +22,11 @@
     transform: none !important;
 }
 
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 // Pagination
 // --------------------------------------------
 
@@ -44,17 +49,8 @@
     width: 160px;
 }
 
-// Content
-// --------------------------------------------
 
-// Adjustment for line length
-.content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-
-// Tags
+// Tag Archive
 // --------------------------------------------
 
 .tag-header,
@@ -63,7 +59,7 @@
 }
 
 
-// Authors
+// Author Archive
 // --------------------------------------------
 
 .author-header {
@@ -103,3 +99,194 @@
     margin-right: 10px;
 }
 
+// Author Box
+// --------------------------------------------
+
+.post-footer {
+    margin: 4rem auto 0;
+    max-width: 700px;
+}
+
+.authors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -40px;
+}
+
+.author-box  {
+    flex: 1 1 300px;
+    display: inline-flex;
+    align-items: flex-start;
+    padding: 5px 20px;
+    margin: 0 20px 20px;
+    border: none;
+}
+
+.author-box:hover {
+    color: #212931 !important;
+}
+
+.author-box:hover .author-box-name {
+    color: #18bfef;
+    transition: color 0.2s ease;
+}
+
+.author-box .author-profile-image {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.author-box-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-box-label {
+    font-family: _font(family-heading);
+    font-size: 0.7rem;
+    line-height: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.author-box-name {
+    margin: 3px 0;
+    font-size: 1.3rem;
+    line-height: 1.2em;
+    transition: color 0.5s ease;
+}
+
+.author-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5em;
+}
+
+.kg-image {
+    max-width: 100%;
+}
+
+// Content
+// --------------------------------------------
+
+.kg-card {
+    margin: 0 0 2rem 0;
+}
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+}
+
+.kg-image {
+    max-width: 100%;
+}
+
+.kg-card figcaption {
+    font-size: 0.8rem;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.kg-width-wide {
+    position: relative;
+    margin-left: -6rem;
+    margin-right: -6rem;
+    width: calc(100% + 12rem);
+
+    @include breakpoint('<=large') {
+        margin-left: -4rem;
+        margin-right: -4rem;
+        width: calc(100% + 8rem);
+    }
+    @include breakpoint('<=medium') {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        width: calc(100% + 4rem);
+    }
+    @include breakpoint('<=small') {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+.kg-width-full {
+    position: relative;
+    margin-left: -14.1rem;
+    margin-right: -14.1rem;
+    width: calc(100% + 28.2rem);
+
+    @include breakpoint('<=large') {
+        margin-left: -8rem;
+        margin-right: -8rem;
+        width: calc(100% + 16rem);
+    }
+    @include breakpoint('<=medium') {
+        margin-left: -4rem;
+        margin-right: -4rem;
+        width: calc(100% + 8rem);
+    }
+    @include breakpoint('<=small') {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        width: calc(100% + 4rem);
+    }
+}
+
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: -6rem;
+    margin-right: -6rem;
+    width: calc(100% + 12rem);
+
+    @include breakpoint('<=large') {
+        margin-left: -4rem;
+        margin-right: -4rem;
+        width: calc(100% + 8rem);
+    }
+    @include breakpoint('<=medium') {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        width: calc(100% + 4rem);
+    }
+    @include breakpoint('<=small') {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em;
+}
+
+.kg-gallery-card + .kg-image-card.kg-width-wide,
+.kg-gallery-card + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
+    margin: -2.25em 0 3em;
+}

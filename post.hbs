@@ -34,18 +34,26 @@ into the {body} of the default.hbs template --}}
         </section>
         {{/if}}
 
-        <footer class="post-full-footer">
+        <footer class="post-footer">
 
-            {{!-- There are two options for how we display the byline/author-info.
-            If the post has more than one author, we load a specific template
-            from includes/byline-multiple.hbs, otherwise, we just use the
-            default byline. --}}
-
-            {{#has author="count:>1"}}
-            {{> "byline-multiple"}}
-            {{else}}
-            {{> "byline-single"}}
-            {{/has}}
+            <div class="authors">
+                {{#foreach authors}}
+                <a class="author-box" href="{{url}}">
+                    {{#if profile_image}}
+                    <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+                    {{/if}}
+                    <section class="author-box-content">
+                        <div class="author-box-label">Author</div>
+                        <h5 class="author-box-name">{{name}}</h5>
+                        {{#if bio}}
+                        <p>{{bio}}</p>
+                        {{else}}
+                        <p>Read more posts by this author.</p>
+                        {{/if}}
+                    </section>
+                </a>
+                {{/foreach}}
+            </div>
 
         </footer>
 
@@ -59,3 +67,14 @@ into the {body} of the default.hbs template --}}
 </main>
 
 {{/post}}
+
+<script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function (image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    })
+</script>
