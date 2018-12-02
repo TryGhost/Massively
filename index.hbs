@@ -6,6 +6,7 @@ into the {body} of the default.hbs template --}}
 <main id="main">
 
     {{!-- Featured Post --}}
+    {{#is "home"}}
     {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
         {{#foreach featured_post}}
             <article class="post featured">
@@ -23,6 +24,7 @@ into the {body} of the default.hbs template --}}
             </article>
         {{/foreach}}
     {{/get}}
+    {{/is}}
 
     {{!-- Posts --}}
     <section class="posts">
