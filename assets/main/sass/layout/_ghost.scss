@@ -290,3 +290,25 @@
 .kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
     margin: -2.25em 0 3em;
 }
+
+// Error Pages
+// --------------------------------------------
+
+
+.error-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 12vw !important;
+    text-align: center;
+}
+
+.error-description {
+    text-align: center;
+}
+
+.error-code {
+    margin: 0;
+}
