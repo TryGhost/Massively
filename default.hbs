@@ -18,8 +18,8 @@
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
-    {{#if @blog.cover_image}}
-    <style>#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}),linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @blog.cover_image}}") }</style>
+    {{#if @site.cover_image}}
+    <style>#wrapper>.bg {background-image: url({{asset "images/overlay.png"}}),linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{img_url @site.cover_image}}") }</style>
     {{/if}}
 
 </head>
@@ -30,8 +30,8 @@
         {{!-- Intro --}}
         {{#is "home"}}
         <div id="intro">
-            <h1>{{@blog.title}}</h1>
-            <p>{{@blog.description}}</p>
+            <h1>{{@site.title}}</h1>
+            <p>{{@site.description}}</p>
             <ul class="actions">
                 <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
             </ul>
@@ -40,15 +40,15 @@
 
         {{!-- Header --}}
         <header id="header">
-            {{#if @blog.logo}}
-                <a href="{{@blog.url}}" class="logo image"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+            {{#if @site.logo}}
+                <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
             {{else}}
-                <a href="{{@blog.url}}" class="logo">{{@blog.title}}</a>
+                <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
             {{/if}}
         </header>
 
         {{!-- Nav --}}
-        {{#if @blog.navigation}}
+        {{#if @site.navigation}}
             {{navigation}}
         {{/if}}
 
@@ -58,7 +58,7 @@
         {{!-- The footer at the very bottom of the screen --}}
         <div id="copyright">
             <ul>
-                <li>&copy; {{@blog.title}}</li>
+                <li>&copy; {{@site.title}}</li>
                 <li>Design by <a href="https://html5up.net">HTML5 UP</a></li>
                 <li>Published with <a href="https://ghost.org">Ghost</a></li>
             </ul>
