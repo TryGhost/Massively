@@ -4,7 +4,7 @@
 // Fix main cover image bg position
 #wrapper>.bg {
     background-position: top center;
-    background-size: cover;
+    background-size: auto, auto, cover;
 }
 
 #intro {
