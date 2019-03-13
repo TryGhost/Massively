@@ -172,6 +172,11 @@
 // Content
 // --------------------------------------------
 
+// Markdown images and videos
+.content p > img, .content p > video {
+    max-width: 100%;
+}
+
 .kg-card {
     margin: 0 0 2rem 0;
 }
