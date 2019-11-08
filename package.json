@@ -16,6 +16,7 @@
         "zip": "gulp zip",
         "pretest": "gulp build",
         "test": "gscan .",
+        "test:ci": "gscan --fatal --verbose .",
         "preship": "yarn test",
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
