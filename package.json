@@ -52,6 +52,7 @@
             "name": "Gwendal R",
             "email": "contact@gwendal-raballand.fr",
             "url": "https://github.com/Gwendal-R"
+        }
     ],
     "devDependencies": {
         "beeper": "^1.1.1",
