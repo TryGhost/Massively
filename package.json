@@ -52,7 +52,7 @@
     "devDependencies": {
         "beeper": "^1.1.1",
         "gscan": "3.3.0",
-        "gulp": "4.0.0",
+        "gulp": "4.0.2",
         "gulp-livereload": "4.0.1",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.4",
