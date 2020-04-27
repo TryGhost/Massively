@@ -12,7 +12,7 @@ into the {body} of the default.hbs template --}}
         {{#if description}}
             <p class="content">{{description}}</p>
         {{else}}
-            <p>A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}</p>
+            <p>{{t 'A collection of'}} {{plural ../pagination.total empty=(t 'posts') singular=(t '% post') plural=(t '% posts')}}</p>
         {{/if}}
         {{#if feature_image}}
         <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
@@ -26,7 +26,7 @@ into the {body} of the default.hbs template --}}
         {{#foreach posts}}
         <article>
             <header>
-                <span class="date">{{date format="MMM D, YYYY"}}</span>
+                <span class="date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM D, YYYY"}}</time></span>
                 <h2><a href="{{url}}">{{title}}</a></h2>
             </header>
             {{#if feature_image}}
@@ -34,7 +34,7 @@ into the {body} of the default.hbs template --}}
             {{/if}}
             <p>{{excerpt words="33"}}</p>
             <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
+                <li><a href="{{url}}" class="button">{{t 'Full Story'}}</a></li>
             </ul>
         </article>
         {{/foreach}}

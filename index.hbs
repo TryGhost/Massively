@@ -11,7 +11,7 @@ into the {body} of the default.hbs template --}}
         {{#foreach featured_post}}
             <article class="post featured">
                 <header class="major">
-                    <span class="date">{{date format="MMM D, YYYY"}}</span>
+                    <span class="date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM D, YYYY"}}</time></span>
                     <h2><a href="{{url}}">{{title}}</a></h2>
                     <p>{{excerpt words="44"}}</p>
                 </header>
@@ -19,7 +19,7 @@ into the {body} of the default.hbs template --}}
                 <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
                 {{/if}}
                 <ul class="actions special">
-                    <li><a href="{{url}}" class="button large">Full Story</a></li>
+                    <li><a href="{{url}}" class="button large">{{t 'Full Story'}}</a></li>
                 </ul>
             </article>
         {{/foreach}}
@@ -32,7 +32,7 @@ into the {body} of the default.hbs template --}}
         {{#foreach posts}}
         <article>
             <header>
-                <span class="date">{{date format="MMM D, YYYY"}}</span>
+                <span class="date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM D, YYYY"}}</time></span>
                 <h2><a href="{{url}}">{{title}}</a></h2>
             </header>
             {{#if feature_image}}
@@ -40,7 +40,7 @@ into the {body} of the default.hbs template --}}
             {{/if}}
             <p>{{excerpt words="33"}}</p>
             <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
+                <li><a href="{{url}}" class="button">{{t 'Full Story'}}</a></li>
             </ul>
         </article>
         {{/foreach}}
