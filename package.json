@@ -2,7 +2,7 @@
     "name": "massively",
     "description": "This is Massively, a text-heavy, article-oriented theme for Ghost.",
     "demo": "https://massively.ghost.io",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
