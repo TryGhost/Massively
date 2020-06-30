@@ -50,14 +50,14 @@
         }
     ],
     "devDependencies": {
-        "beeper": "1.1.1",
+        "beeper": "2.0.0",
         "gscan": "3.5.4",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-sass": "4.0.2",
         "gulp-sourcemaps": "2.6.5",
         "gulp-watch": "5.0.1",
-        "gulp-zip": "4.2.0",
+        "gulp-zip": "5.0.2",
         "node-sass": "4.11.0"
     },
     "config": {
