@@ -58,7 +58,7 @@
         "gulp-sourcemaps": "2.6.5",
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.0.2",
-        "node-sass": "4.11.0"
+        "node-sass": "4.14.1"
     },
     "config": {
         "posts_per_page": 12
