@@ -19,7 +19,7 @@ into the {body} of the default.hbs template --}}
                 <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
                 {{/if}}
                 <ul class="actions special">
-                    <li><a href="{{url}}" class="button large">Full Story</a></li>
+                    <li><a href="{{url}}" class="button large">{{t "Full Story"}}</a></li>
                 </ul>
             </article>
         {{/foreach}}
@@ -40,7 +40,7 @@ into the {body} of the default.hbs template --}}
             {{/if}}
             <p>{{excerpt words="33"}}</p>
             <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
+                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
             </ul>
         </article>
         {{/foreach}}

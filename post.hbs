@@ -25,15 +25,6 @@ into the {body} of the default.hbs template --}}
             {{content}}
         </div>
 
-        {{!-- Email subscribe form at the bottom of the page --}}
-        {{#if @labs.subscribers}}
-        <section class="subscribe-form">
-            <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
-            <p>Get the latest posts delivered right to your inbox</p>
-            {{subscribe_form placeholder="youremail@example.com"}}
-        </section>
-        {{/if}}
-
         <footer class="post-footer">
 
             <div class="authors">
@@ -43,17 +34,30 @@ into the {body} of the default.hbs template --}}
                     <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
                     {{/if}}
                     <section class="author-box-content">
-                        <div class="author-box-label">Author</div>
+                        <div class="author-box-label">{{t "Author"}}</div>
                         <h5 class="author-box-name">{{name}}</h5>
                         {{#if bio}}
                         <p>{{bio}}</p>
                         {{else}}
-                        <p>Read more posts by this author.</p>
+                        <p>{{t "Read more posts by this author."}}</p>
                         {{/if}}
                     </section>
                 </a>
                 {{/foreach}}
             </div>
+
+            {{!-- Email subscribe form at the bottom of the page --}}
+            {{#if @labs.members}}
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">{{t "Subscribe to"}} {{@site.title}}</h3>
+                    <p>{{t "Subscribe desc"}}</p>
+                    <form data-members-form="signin">
+                        <input data-members-email type="email" required="true"/>
+                        <button type="submit" style="margin-top:1em;">{{t "Subscribe"}}</button>
+                    </form>
+                    <p data-members-error></p>
+                </section>
+            {{/if}}
 
         </footer>
 

@@ -20,10 +20,10 @@ into the {body} of the default.hbs template --}}
             <div class="author-location icon fa-map-pin">{{location}} <span class="bull">&bull;</span></div>
             {{/if}}
             <div class="author-stats">
-                {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} <span class="bull">&bull;</span>
+                {{plural ../pagination.total empty=(t "No posts") singular=(t "% post") plural=(t "% posts")}} <span class="bull">&bull;</span>
             </div>
             {{#if website}}
-            <a href="{{url}}" class="icon fa-globe" title="Website"><span class="label">Website</span></a>
+            <a href="{{url}}" class="icon fa-globe" title="Website"><span class="label">{{t "Website"}}</span></a>
             {{/if}}
             {{#if twitter}}
             <a href="{{twitter_url}}" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a>
@@ -50,7 +50,7 @@ into the {body} of the default.hbs template --}}
             {{/if}}
             <p>{{excerpt words="33"}}</p>
             <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
+                <li><a href="{{url}}" class="button">{{t "Full Story"}}</a></li>
             </ul>
         </article>
         {{/foreach}}

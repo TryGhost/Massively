@@ -1,13 +1,13 @@
 <footer>
     <nav class="pagination" role="navigation">
         {{#if prev}}
-        <a class="previous newer-posts" href="{{page_url prev}}">Newer Posts</a>
+        <a class="previous newer-posts" href="{{page_url prev}}">{{t "Newer Posts"}}</a>
         {{else}}
         <div class="spacer"></div>
         {{/if}}
-        <span class="page">Page {{page}} of {{pages}}</span>
+        <span class="page">{{{t "Page {page} of {pages}" page=page pages=pages}}}</span>
         {{#if next}}
-        <a class="next older-posts" href="{{page_url next}}">Older Posts</a>
+        <a class="next older-posts" href="{{page_url next}}">{{t "Older Posts"}}</a>
         {{else}}
         <div class="spacer"></div>
         {{/if}}
