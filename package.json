@@ -4,8 +4,8 @@
     "demo": "https://massively.ghost.io",
     "version": "1.0.3",
     "engines": {
-        "ghost": ">=2.0.0",
-        "ghost-api": "v2"
+        "ghost": ">=3.0.0",
+        "ghost-api": "v3"
     },
     "license": "MIT",
     "screenshots": {
