@@ -25,6 +25,10 @@
 			background-repeat:		repeat,								no-repeat,													no-repeat;
 			background-attachment:	scroll,								scroll,														scroll;
 			z-index: -1;
+            backface-visibility: hidden;
+            perspective: 1000;
+            transform-style: preserve-3d;
+            will-change: transform;
 
 			&.fixed {
 				position: fixed;
