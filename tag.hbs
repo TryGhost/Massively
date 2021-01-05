@@ -23,7 +23,7 @@ into the {body} of the default.hbs template --}}
     {{!-- Posts --}}
     <section class="posts">
 
-        {{#foreach posts}}
+        {{#foreach posts visibility="all"}}
         <article>
             <header>
                 <span class="date">{{date format="MMM D, YYYY"}}</span>

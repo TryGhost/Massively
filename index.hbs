@@ -8,7 +8,7 @@ into the {body} of the default.hbs template --}}
     {{!-- Featured Post --}}
     {{#is "home"}}
     {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
-        {{#foreach featured_post}}
+        {{#foreach featured_post visibility="all"}}
             <article class="post featured">
                 <header class="major">
                     <span class="date">{{date format="MMM D, YYYY"}}</span>
@@ -29,7 +29,7 @@ into the {body} of the default.hbs template --}}
     {{!-- Posts --}}
     <section class="posts">
 
-        {{#foreach posts}}
+        {{#foreach posts visibility="all"}}
         <article>
             <header>
                 <span class="date">{{date format="MMM D, YYYY"}}</span>
