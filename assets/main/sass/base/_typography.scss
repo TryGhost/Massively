@@ -184,7 +184,7 @@
 
 			&:hover {
 				border-bottom-color: transparent;
-				color: _palette($p, accent) !important;
+				color: var(--color-primary) !important;
 			}
 		}
 

@@ -224,7 +224,7 @@
 			border-color: _palette($p, border);
 
 			&:focus {
-				border-color: _palette($p, accent);
+				border-color: var(--color-primary);
 			}
 		}
 
@@ -263,7 +263,7 @@
 
 			&:focus + label {
 				&:before {
-					border-color: _palette($p, accent);
+					border-color: var(--color-primary);
 				}
 			}
 		}

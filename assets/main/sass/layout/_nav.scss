@@ -65,7 +65,7 @@
 							color: _palette(invert, bg);
 
 							&:hover {
-								color: _palette(invert, accent) !important;
+								color: var(--color-primary) !important;
 							}
 						}
 					}

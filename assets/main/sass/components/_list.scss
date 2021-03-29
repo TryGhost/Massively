@@ -68,7 +68,7 @@
 					a.icon {
 						&:hover {
 							&:before {
-								color: _palette($p, accent);
+								color: var(--color-primary);
 							}
 						}
 					}
@@ -85,7 +85,7 @@
 						a.icon {
 							&:hover {
 								&:before {
-									box-shadow: inset 0 0 0 2px _palette($p, accent);
+									box-shadow: inset 0 0 0 2px var(--color-primary);
 								}
 							}
 						}

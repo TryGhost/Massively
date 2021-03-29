@@ -42,8 +42,8 @@
 			visibility: visible;
 
 			&:hover {
-				border-color: _palette(invert, accent) !important;
-				color: _palette(invert, accent) !important;
+				border-color: var(--color-primary) !important;
+				color: var(--color-primary) !important;
 			}
 		}
 
