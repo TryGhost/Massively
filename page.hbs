@@ -1,13 +1,13 @@
 {{!< default}}
 
-{{> "header"}}
-
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the page --}}
 
 {{#has tag="#zh"}}
+    {{> "header" langCode="zh"}}
     {{> "zh"}}
 {{else}}
+    {{> "header" langCode=""}}
     {{> "en"}}
 {{/has}}
 

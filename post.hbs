@@ -1,15 +1,15 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
-  into the {body} of the default.hbs template --}}
-
-{{> "header"}}
+   into the {body} of the default.hbs template --}}
 
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
 
 {{#has tag="#zh"}}
+    {{> "header" langCode="zh"}}
     {{> "zh"}}
 {{else}}
+    {{> "header" langCode=""}}
     {{> "en"}}
 {{/has}}
 

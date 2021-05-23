@@ -15,5 +15,7 @@
 <header id="header">
     {{#if langText}}
         <a href="{{@site.url}}/{{langCode}}" class="logo" style="font-size: 1rem;">{{langText}}</a>
+    {{else}}
+        <a href="{{@site.url}}/{{langCode}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
     {{/if}}
 </header>
