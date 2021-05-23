@@ -1,0 +1,14 @@
+{{!< default}}
+
+{{> "zh" }}
+
+{{#contentFor "header"}}
+    {{> header home="active" langCode="" langText="English"}}
+
+    {{!-- Nav --}}
+    {{#if @site.secondary_navigation}}
+        {{navigation type="secondary"}}
+    {{/if}}
+{{/contentFor}}
+
+{{> "index" langTag="hash-zh"}}

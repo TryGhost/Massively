@@ -1,7 +1,15 @@
 {{!< default}}
 
+{{> "header"}}
+
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the page --}}
+
+{{#has tag="#zh"}}
+    {{> "zh"}}
+{{else}}
+    {{> "en"}}
+{{/has}}
 
 <main id="main">
     <section class="post">

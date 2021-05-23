@@ -1,0 +1,16 @@
+routes:
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+    filter: 'tag:-hash-zh'
+
+  /zh/:
+    permalink: /zh/{slug}/
+    template: index-zh
+    filter: 'tag:hash-zh'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

@@ -1,16 +1,23 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
+  into the {body} of the default.hbs template --}}
+
+{{> "header"}}
 
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
+
+{{#has tag="#zh"}}
+    {{> "zh"}}
+{{else}}
+    {{> "en"}}
+{{/has}}
 
 <main id="main">
 
     <section class="post">
 
         <header class="major">
-            <span class="date">{{date format="MMMM D, YYYY"}}</span>
             <h1>{{title}}</h1>
             {{#if custom_excerpt}}
                 <p class="content">{{custom_excerpt}}</p>
@@ -43,7 +50,7 @@ into the {body} of the default.hbs template --}}
                     <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
                     {{/if}}
                     <section class="author-box-content">
-                        <div class="author-box-label">Author</div>
+                        <div class="author-box-label">{{{block "author"}}}</div>
                         <h5 class="author-box-name">{{name}}</h5>
                         {{#if bio}}
                         <p>{{bio}}</p>

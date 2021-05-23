@@ -1,6 +1,17 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
+  into the {body} of the default.hbs template --}}
+
+{{> "header"}}
+
+{{#tag}}
+    {{#if accent_color}}
+        {{> "zh"}}
+    {{else}}
+        {{> "en"}}
+    {{/if}}
+{{/tag}}
+
 
 {{!-- Main --}}
 <main id="main">
@@ -8,7 +19,7 @@ into the {body} of the default.hbs template --}}
     {{!-- Tag info --}}
     {{#tag}}
     <header class="tag-header">
-        <h1><a href="{{url}}">{{name}}</a></h1>
+        <h2><ga href="{{url}}">{{name}}</a></h2>
         {{#if description}}
             <p class="content">{{description}}</p>
         {{else}}
@@ -20,28 +31,45 @@ into the {body} of the default.hbs template --}}
     </header>
     {{/tag}}
 
+    {{!-- Featured Post --}}
+    {{#foreach posts}}
+        {{#has tag="#featured"}}
+            <article class="post featured">
+                <header class="major">
+                    <h3><a href="{{url}}">{{title}}</a></h3>
+                    <p>{{excerpt words="44"}}</p>
+                </header>
+                {{#if feature_image}}
+                    <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                {{/if}}
+                <ul class="actions special">
+                    <li><a href="{{url}}" class="button large">{{{block "read_more"}}}</a></li>
+                </ul>
+
+            </article>
+        {{/has}}
+    {{/foreach}}
+
     {{!-- Posts --}}
     <section class="posts">
-
         {{#foreach posts}}
-        <article>
-            <header>
-                <span class="date">{{date format="MMM D, YYYY"}}</span>
-                <h2><a href="{{url}}">{{title}}</a></h2>
-            </header>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-            {{/if}}
-            <p>{{excerpt words="33"}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
-            </ul>
-        </article>
+            {{#has tag="#featured"}}
+
+            {{else}}
+                <article>
+                    <header>
+                        <h3><a href="{{url}}">{{title}}</a></h3>
+                    </header>
+                    {{#if feature_image}}
+                        <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                    {{/if}}
+                    <p>{{excerpt words="33"}}</p>
+                    <ul class="actions special">
+                        <li><a href="{{url}}" class="button">{{{block "read_more"}}}</a></li>
+                    </ul>
+                </article>
+            {{/has}}
         {{/foreach}}
-
     </section>
-
-    {{!-- Pagination --}}
-    {{pagination}}
 
     </main>

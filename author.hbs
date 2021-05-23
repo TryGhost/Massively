@@ -2,6 +2,8 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
+{{> "header"}}
+
 {{!-- Main --}}
 <main id="main">
 
@@ -31,7 +33,6 @@ into the {body} of the default.hbs template --}}
             {{#if facebook}}
             <a href="{{facebook_url}}" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a>
             {{/if}}
-            <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" class="icon fa-rss" target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a>
         </div>
     </header>
     {{/author}}
@@ -42,7 +43,6 @@ into the {body} of the default.hbs template --}}
         {{#foreach posts}}
         <article>
             <header>
-                <span class="date">{{date format="MMM D, YYYY"}}</span>
                 <h2><a href="{{url}}">{{title}}</a></h2>
             </header>
             {{#if feature_image}}
@@ -50,14 +50,17 @@ into the {body} of the default.hbs template --}}
             {{/if}}
             <p>{{excerpt words="33"}}</p>
             <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
+                <li><a href="{{url}}" class="button">
+                    {{#has tag="#zh"}}
+                        阅读更多
+                    {{else}}
+                        Read more
+                    {{/has}}
+                </a></li>
             </ul>
         </article>
         {{/foreach}}
 
     </section>
-
-    {{!-- Pagination --}}
-    {{pagination}}
 
     </main>

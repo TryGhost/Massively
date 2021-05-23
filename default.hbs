@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html lang="{{{block "lang"}}}">
 <head>
 
     {{!-- Document Settings --}}
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     {{!-- Base Meta --}}
-    <title>{{meta_title}}</title>
+    <title>Kofuzan Kaimyo-in</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -27,31 +27,6 @@
 
     <div id="wrapper" {{#is "home"}}class="fade-in"{{/is}}>
 
-        {{!-- Intro --}}
-        {{#is "home"}}
-        <div id="intro">
-            <h1>{{@site.title}}</h1>
-            <p>{{@site.description}}</p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
-        {{/is}}
-
-        {{!-- Header --}}
-        <header id="header">
-            {{#if @site.logo}}
-                <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-            {{else}}
-                <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
-            {{/if}}
-        </header>
-
-        {{!-- Nav --}}
-        {{#if @site.navigation}}
-            {{navigation}}
-        {{/if}}
-
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
 
@@ -59,7 +34,6 @@
         {{> copyright}}
 
     </div>
-
 
     {{!-- Theme Scripts --}}
     <script src="{{asset "main/js/jquery.min.js"}}"></script>
