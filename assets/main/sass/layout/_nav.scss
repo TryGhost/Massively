@@ -79,7 +79,7 @@
 			}
 		}
 
-		@include breakpoint('<=medium') {
+		@include breakpoint('<=default') {
 			display: none;
 		}
 	}

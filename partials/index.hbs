@@ -4,12 +4,12 @@
 <main id="main">
 
     {{!-- Featured Post --}}
-    {{#get "posts" filter="featured:true+tag:{{langTag}}" as |featured_post|}}
+    {{#get "posts" filter="featured:true+tag:{{langTag}}" include="tags" as |featured_post|}}
         {{#foreach featured_post}}
             <article class="post featured">
                 <header class="major">
                     <h2><a href="{{url}}">{{title}}</a></h2>
-                    <p>{{excerpt words="44"}}</p>
+                    {{> "excerpt"}}
                 </header>
                 {{#if feature_image}}
                 <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
@@ -24,16 +24,16 @@
     {{!-- Posts --}}
     <section class="posts">
 
-    {{#get "posts" filter="featured:false+tag:hash-home+tag:{{langTag}}" as | posts|}}
+      {{#get "posts" filter="featured:false+tag:hash-home+tag:{{langTag}}" include="tags" as | posts|}}
         {{#foreach posts}}
         <article>
             <header>
                 <h2><a href="{{url}}">{{title}}</a></h2>
             </header>
             {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
             {{/if}}
-            <p>{{excerpt words="33"}}</p>
+            {{> "excerpt"}}
             <ul class="actions special">
                 <li><a href="{{url}}" class="button">{{{block "read_more"}}}</a></li>
             </ul>

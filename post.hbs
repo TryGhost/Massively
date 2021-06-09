@@ -19,9 +19,7 @@
 
         <header class="major">
             <h1>{{title}}</h1>
-            {{#if custom_excerpt}}
-                <p class="content">{{custom_excerpt}}</p>
-            {{/if}}
+            {{> "excerpt"}}
         </header>
 
         {{#if feature_image}}

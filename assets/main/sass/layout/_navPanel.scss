@@ -42,7 +42,7 @@
 			}
 		}
 
-		@include breakpoint('<=medium') {
+		@include breakpoint('<=default') {
 			display: block;
 		}
 
@@ -129,7 +129,7 @@
 			}
 		}
 
-		@include breakpoint('<=medium') {
+		@include breakpoint('<=default') {
 			display: block;
 		}
 
@@ -138,7 +138,7 @@
 		}
 	}
 
-	@include breakpoint('<=medium') {
+	@include breakpoint('<=default') {
 		body.is-navPanel-visible {
 			#wrapper {
 				opacity: 0.5;

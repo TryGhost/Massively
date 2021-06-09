@@ -168,7 +168,7 @@
 			// Move nav content on breakpoint change.
 				var $navContent = $nav.children();
 
-				breakpoints.on('>medium', function() {
+				breakpoints.on('>default', function() {
 
 					// NavPanel -> Nav.
 						$navContent.appendTo($nav);
@@ -179,7 +179,7 @@
 
 				});
 
-				breakpoints.on('<=medium', function() {
+				breakpoints.on('<=default', function() {
 
 					// Nav -> NavPanel.
 						$navContent.appendTo($navPanelInner);

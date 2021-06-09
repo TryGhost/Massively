@@ -1,6 +1,8 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
+  into the {body} of the default.hbs template --}}
+
+{{> "en" }}
 
 {{> "header"}}
 
@@ -46,9 +48,9 @@ into the {body} of the default.hbs template --}}
                 <h2><a href="{{url}}">{{title}}</a></h2>
             </header>
             {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
             {{/if}}
-            <p>{{excerpt words="33"}}</p>
+            {{> "excerpt"}}
             <ul class="actions special">
                 <li><a href="{{url}}" class="button">
                     {{#has tag="#zh"}}
