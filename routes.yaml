@@ -10,6 +10,7 @@ collections:
     permalink: /zh/{slug}/
     template: index-zh
     filter: 'tag:hash-zh'
+    data: tag.zh-meta
 
 taxonomies:
   tag: /tag/{slug}/
