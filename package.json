@@ -54,13 +54,16 @@
         "gscan": "4.1.0",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
-        "gulp-sass": "4.1.1",
+        "gulp-sass": "^4.1.1",
         "gulp-sourcemaps": "3.0.0",
         "gulp-watch": "5.0.1",
-        "gulp-zip": "5.1.0",
-        "node-sass": "5.0.0"
+        "gulp-zip": "5.1.0"
     },
     "config": {
         "posts_per_page": 12
+    },
+    "dependencies": {
+        "node-sass": "^6.0.1",
+        "sass": "^1.37.0"
     }
 }
