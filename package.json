@@ -60,7 +60,7 @@
         "gulp-zip": "5.1.0"
     },
     "config": {
-        "posts_per_page": 12
+        "posts_per_page": 1000000
     },
     "dependencies": {
         "node-sass": "^6.0.1",
