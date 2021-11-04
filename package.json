@@ -61,6 +61,24 @@
         "node-sass": "5.0.0"
     },
     "config": {
-        "posts_per_page": 12
+        "posts_per_page": 12,
+        "custom": {
+            "title_font": {
+                "type": "select",
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif"
+                ],
+                "default": "Modern sans-serif"
+            },
+            "body_font": {
+                "type": "select",
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif"
+                ],
+                "default": "Elegant serif"
+            }
+        }
     }
 }
