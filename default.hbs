@@ -23,7 +23,7 @@
     {{/if}}
 
 </head>
-<body class="is-preload {{body_class}}">
+<body class="is-preload {{body_class}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}">
 
     <div id="wrapper" {{#is "home"}}class="fade-in"{{/is}}>
 
