@@ -21,18 +21,6 @@
     margin: 0 auto;
 }
 
-.has-serif-title .content [id] {
-    font-family: _font(family);
-}
-
-.has-sans-body .content > blockquote,
-.has-sans-body .content > ol,
-.has-sans-body .content > ul,
-.has-sans-body .content > dl,
-.has-sans-body .content > p {
-    font-family: _font(family-heading);
-}
-
 // Pagination
 // --------------------------------------------
 
@@ -198,7 +186,7 @@
     width: 100%;
 }
 
-figcaption {
+.kg-card figcaption {
     margin-top: 1rem;
     font-size: 0.8rem;
     line-height: 1.4em;

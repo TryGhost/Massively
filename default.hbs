@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html lang="{{@site.lang}}">
 <head>
 
     {{!-- Document Settings --}}
@@ -23,15 +23,16 @@
     {{/if}}
 
 </head>
-<body class="is-preload {{body_class}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}">
+<body class="is-preload {{body_class}}">
 
     <div id="wrapper" {{#is "home"}}class="fade-in"{{/is}}>
 
         {{!-- Intro --}}
         {{#is "home"}}
         <div id="intro">
-            <h1>{{@site.title}}</h1>
-            <p>{{@site.description}}</p>
+            <h1> </h1>
+            <h1> </h1>
+            <p style="margin: top 200px;">{{@site.description}}</p>
             <ul class="actions">
                 <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
             </ul>
@@ -56,7 +57,11 @@
         {{{body}}}
 
         {{!-- The footer at the very bottom of the screen --}}
-        {{> copyright}}
+        <div id="copyright">
+            <ul>
+                <li>&copy; {{@site.title}}</li>
+            </ul>
+        </div>
 
     </div>
 
