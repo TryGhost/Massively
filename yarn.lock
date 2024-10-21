@@ -1132,21 +1132,21 @@
   dependencies:
     lodash "^4.17.11"
 
-"@tryghost/nql-lang@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@tryghost/nql-lang/-/nql-lang-0.6.2.tgz#529d4fc06840dd0d4f120610d3d081f5df51c12c"
-  integrity sha512-woIgIi89fpRnuBZQjZNF4MHbwp2IwYGQ/vEuvCGhHmOE47qhtEadvd0dCUnzOYSszgsFcp+xtOe6ZrICVEdUmw==
+"@tryghost/nql-lang@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@tryghost/nql-lang/-/nql-lang-0.6.3.tgz#3fe9015d5ebcfdf50be409bf1b0f6cc22cfb47a1"
+  integrity sha512-NnSdAjN3TIcm8g1/QW/EKLeGKAYIQR6CQZULMt1mbV+lVWnNjrgZNZchg4a90CdC5e0owOps+rz+2dmpDEC/Iw==
   dependencies:
     date-fns "^2.28.0"
 
 "@tryghost/nql@^0.12.5":
-  version "0.12.6"
-  resolved "https://registry.yarnpkg.com/@tryghost/nql/-/nql-0.12.6.tgz#18c8b57f73d37269e2c0ab23b6c3f4f4030804b4"
-  integrity sha512-IIcfxSgK++O/6om42T+waIjuJCeZ0Ma88ITp/DRbaqgGzUpd9tRAyOzsTTxQkZ7OUbHXd165+ee4myHTh7fmSw==
+  version "0.12.7"
+  resolved "https://registry.yarnpkg.com/@tryghost/nql/-/nql-0.12.7.tgz#4ef56984809cb39416b9b21b9cd7ae976720f5e3"
+  integrity sha512-O58X36ug6KZ8n0/a/mkhb0My3vDO/xbH3HlK+U0t6houwQN7xUEOsZxBq7E0w/h4dXXwQCFeW5mIfuRD3FHWIg==
   dependencies:
     "@tryghost/mongo-knex" "^0.9.1"
     "@tryghost/mongo-utils" "^0.6.2"
-    "@tryghost/nql-lang" "^0.6.2"
+    "@tryghost/nql-lang" "^0.6.3"
     mingo "^2.2.2"
 
 "@tryghost/pretty-cli@^1.2.38":
@@ -1245,9 +1245,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "22.7.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.7.5.tgz#cfde981727a7ab3611a481510b473ae54442b92b"
-  integrity sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==
+  version "22.7.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.7.7.tgz#6cd9541c3dccb4f7e8b141b491443f4a1570e307"
+  integrity sha512-SRxCrrg9CL/y54aiMCG3edPKdprgMVGDXjA3gB8UmmBW5TcXzRUYAh8EWzTnSJFAd1rgImPELza+A3bJ+qxz8Q==
   dependencies:
     undici-types "~6.19.2"
 
@@ -1580,11 +1580,6 @@ aws4@^1.8.0:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.13.2.tgz#0aa167216965ac9474ccfa83892cfb6b3e1e52ef"
   integrity sha512-lHe62zvbTB5eEABUVi/AwVh0ZKY9rMMDhmm+eeyuuUQbQ3+J+fONVQOZyj+DdrvD4BY33uYniyRJ4UJIaSKAfw==
-
-b4a@^1.6.4:
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/b4a/-/b4a-1.6.7.tgz#a99587d4ebbfbd5a6e3b21bdb5d5fa385767abe4"
-  integrity sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==
 
 bach@^2.0.1:
   version "2.0.1"
@@ -4665,10 +4660,15 @@ ncp@~2.0.0:
   resolved "https://registry.yarnpkg.com/ncp/-/ncp-2.0.0.tgz#195a21d6c46e361d2fb1281ba38b91e9df7bdbb3"
   integrity sha512-zIdGUrPRFTUELUvr3Gmc7KZ2Sw/h1PiVM0Af/oHB6zgnV1ikqSfRk+TOufi79aHYCW3NiOXmr1BP5nWbzojLaA==
 
-negotiator@0.6.3, negotiator@^0.6.2, negotiator@^0.6.3:
+negotiator@0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
+
+negotiator@^0.6.2, negotiator@^0.6.3:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.4.tgz#777948e2452651c570b712dd01c23e262713fff7"
+  integrity sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==
 
 neo-async@^2.6.2:
   version "2.6.2"
@@ -5014,9 +5014,9 @@ picocolors@^0.2.1:
   integrity sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==
 
 picocolors@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.0.tgz#5358b76a78cde483ba5cef6a9dc9671440b27d59"
-  integrity sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.1.tgz#3d321af3eab939b083c8f929a1d12cda81c26b6b"
+  integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
 
 picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   version "2.3.1"
@@ -6005,11 +6005,9 @@ teex@^1.0.1:
     streamx "^2.12.5"
 
 text-decoder@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/text-decoder/-/text-decoder-1.2.0.tgz#85f19d4d5088e0b45cd841bdfaeac458dbffeefc"
-  integrity sha512-n1yg1mOj9DNpk3NeZOx7T6jchTbyJS3i3cucbNN6FcdPriMZx7NsgrGpWWdWZZGxD7ES1XB+3uoqHMgOKaN+fg==
-  dependencies:
-    b4a "^1.6.4"
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/text-decoder/-/text-decoder-1.2.1.tgz#e173f5121d97bfa3ff8723429ad5ba92e1ead67e"
+  integrity sha512-x9v3H/lTKIJKQQe7RPQkLfKAnc9lUTkWDypIQgTzPJAq+5/GCDHonmshfvlsNSj58yyshbIJJDLmU15qNERrXQ==
 
 through2@^2.0.0, through2@^2.0.3:
   version "2.0.5"
@@ -6115,9 +6113,9 @@ trim-newlines@^3.0.0:
   integrity sha512-0z3j8R7MCjy10kc/g+qg7Ln3alJTodw9aDuVWZa3uiWqfuBMKeAeP2ocWcxoyM3D73yz3Jt/Pu4qPr4wHSdB/Q==
 
 tslib@^2.4.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.7.0.tgz#d9b40c5c40ab59e8738f297df3087bf1a2690c01"
-  integrity sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.8.0.tgz#d124c86c3c05a40a91e6fdea4021bd31d377971b"
+  integrity sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
