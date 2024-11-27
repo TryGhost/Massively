@@ -54,7 +54,7 @@
         "gscan": "4.46.0",
         "gulp": "5.0.0",
         "gulp-livereload": "4.0.2",
-        "gulp-sass": "5.1.0",
+        "gulp-sass": "6.0.0",
         "gulp-sourcemaps": "3.0.0",
         "gulp-watch": "5.0.1",
         "gulp-zip": "6.0.0",
