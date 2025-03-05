@@ -3383,10 +3383,10 @@ gulp-plugin-extras@^1.1.0:
     chalk "^5.3.0"
     easy-transform-stream "^1.0.1"
 
-gulp-sass@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-sass/-/gulp-sass-6.0.0.tgz#91e651d86baf53bf7de8a537b1a38ea839968a4b"
-  integrity sha512-FGb4Uab4jnH2GnSfBGd6uW3+imvNodAGfsjGcUhEtpNYPVx+TK2tp5uh7MO0sSR7aIf1Sm544werc+zV7ejHHw==
+gulp-sass@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-sass/-/gulp-sass-6.0.1.tgz#28d292b5e9ca143d763e14fce87d6723b6d1b749"
+  integrity sha512-4wonidxB8lGPHvahelpGavUBJAuERSl+OIVxPCyQthK4lSJhZ/u3/qjFcyAtnMIXDl6fXTn34H4BXsN7gt54kQ==
   dependencies:
     lodash.clonedeep "^4.5.0"
     picocolors "^1.0.0"
