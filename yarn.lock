@@ -414,15 +414,15 @@
   resolved "https://registry.yarnpkg.com/@sec-ant/readable-stream/-/readable-stream-0.4.1.tgz#60de891bb126abfdc5410fdc6166aca065f10a0c"
   integrity sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==
 
-"@sentry/core@9.27.0":
-  version "9.27.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-9.27.0.tgz#e97d6957c243d95f9f05ccb553b937838bb500ea"
-  integrity sha512-Zb2SSAdWXQjTem+sVWrrAq9L6YYfxyoTwtapaE6C6qZBR5C8Uak0wcYww8StaCFH7dDA/PSW+VxOwjNXocrQHQ==
+"@sentry/core@9.30.0":
+  version "9.30.0"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-9.30.0.tgz#0653ac8cc01476567564760002f7407fc3e937a8"
+  integrity sha512-JfEpeQ8a1qVJEb9DxpFTFy1J1gkNdlgKAPiqYGNnm4yQbnfl2Kb/iEo1if70FkiHc52H8fJwISEF90pzMm6lPg==
 
 "@sentry/node@^9.0.0":
-  version "9.27.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-9.27.0.tgz#0538930b23aafa347e1a2a7aa689450195f30fb0"
-  integrity sha512-EVyDfGRjMAL+SS0lFYK8BKZZiVfKBu6sItX/m2CGcpVLjTwhGxJQWdHlKJMEe8hIkjabME+VLL/mnkA3mINSfQ==
+  version "9.30.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-9.30.0.tgz#8ba79c7743a18994addd563af944ec252086ca3a"
+  integrity sha512-jHuSSKro2DUaccGcYSBbB8Rj0sG+LRh1iSWrJ+4c4Pj7tJFN9MbeMybC1buMSzAp+rwHUMZ3+ws0kgNVtsRJJg==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/context-async-hooks" "^1.30.1"
@@ -454,17 +454,17 @@
     "@opentelemetry/sdk-trace-base" "^1.30.1"
     "@opentelemetry/semantic-conventions" "^1.34.0"
     "@prisma/instrumentation" "6.8.2"
-    "@sentry/core" "9.27.0"
-    "@sentry/opentelemetry" "9.27.0"
+    "@sentry/core" "9.30.0"
+    "@sentry/opentelemetry" "9.30.0"
     import-in-the-middle "^1.13.1"
     minimatch "^9.0.0"
 
-"@sentry/opentelemetry@9.27.0":
-  version "9.27.0"
-  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.27.0.tgz#9032a8ec4b6848d256796f84c2747f2a79e8c9d9"
-  integrity sha512-IHhDUdZU+gAUEupovcoUBgXfzQoMDh6n8epjLGpV5LxjiujM+byvvrBD7Witoz/ZilOFn585uvncW7juCe7grw==
+"@sentry/opentelemetry@9.30.0":
+  version "9.30.0"
+  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.30.0.tgz#cc632101fe30d001c7aa99c8b6688c7cdefe9328"
+  integrity sha512-LhTmyGGLAP/LAxs/oXuPs0LC5Z80QSLL1oUoBRB5/+MitK7Huug6n8ZFjPTP3/6bT67XOVqILCdj8BwMlBeXhA==
   dependencies:
-    "@sentry/core" "9.27.0"
+    "@sentry/core" "9.30.0"
 
 "@sindresorhus/is@^5.2.0":
   version "5.6.0"
@@ -1528,11 +1528,11 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "22.15.30"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.15.30.tgz#3a20431783e28dd0b0326f84ab386a2ec81d921d"
-  integrity sha512-6Q7lr06bEHdlfplU6YRbgG1SFBdlsfNC4/lX+SkhiTs0cpJkOElmWls8PxDFv4yY/xKb8Y6SO0OmSX4wgqTZbA==
+  version "24.0.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.0.3.tgz#f935910f3eece3a3a2f8be86b96ba833dc286cab"
+  integrity sha512-R4I/kzCYAdRLzfiCabn9hxWfbuHS573x+r0dJMkkzThEa7pbrcDWK+9zu3e7aBOouf+rQAciqPFMnxwr0aWgKg==
   dependencies:
-    undici-types "~6.21.0"
+    undici-types "~7.8.0"
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.4"
@@ -2031,17 +2031,17 @@ body@^5.1.0:
     safe-json-parse "~1.0.1"
 
 brace-expansion@^1.1.7:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
-  integrity sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.12.tgz#ab9b454466e5a8cc3a187beaad580412a9c5b843"
+  integrity sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
 brace-expansion@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-2.0.1.tgz#1edc459e0f0c548486ecf9fc99f2221364b9a0ae"
-  integrity sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-2.0.2.tgz#54fc53237a613d854c7bd37463aad17df87214e7"
+  integrity sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==
   dependencies:
     balanced-match "^1.0.0"
 
@@ -2814,9 +2814,9 @@ encoding@^0.1.12, encoding@^0.1.13:
     iconv-lite "^0.6.2"
 
 end-of-stream@^1.1.0, end-of-stream@^1.4.1, end-of-stream@^1.4.4:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.4.tgz#5ae64a5f45057baf3626ec14da0ca5e4b2431eb0"
-  integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.5.tgz#7344d711dea40e0b74abc2ed49778743ccedb08c"
+  integrity sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==
   dependencies:
     once "^1.4.0"
 
@@ -3995,9 +3995,9 @@ ieee754@^1.1.13, ieee754@^1.2.1:
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
 import-in-the-middle@^1.13.1, import-in-the-middle@^1.8.1:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-1.14.0.tgz#c9b6cd3400718ff0acbbf5c870adf708bbf5ef39"
-  integrity sha512-g5zLT0HaztRJWysayWYiUq/7E5H825QIiecMD2pI5QO7Wzr847l6GDvPvmZaDIdrDtS2w7qRczywxiK6SL5vRw==
+  version "1.14.2"
+  resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-1.14.2.tgz#283661625a88ff7c0462bd2984f77715c3bc967c"
+  integrity sha512-5tCuY9BV8ujfOpwtAGgsTx9CGUapcFMEEyByLv1B+v2+6DhAcw+Zr0nhQT7uwaZ7DiourxFEscghOR8e1aPLQw==
   dependencies:
     acorn "^8.14.0"
     acorn-import-attributes "^1.9.5"
@@ -5130,9 +5130,9 @@ normalize-path@^2.0.0, normalize-path@^2.0.1, normalize-path@^2.1.1:
     remove-trailing-separator "^1.0.1"
 
 normalize-url@^8.0.0:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-8.0.1.tgz#9b7d96af9836577c58f5883e939365fa15623a4a"
-  integrity sha512-IO9QvjUMWxPQQhs60oOu10CRkWCiZzSUkzbXGGV9pviYl1fXYcvkzQ5jV9z8Y6un8ARoVRl4EtC6v6jNqbaJ/w==
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-8.0.2.tgz#3b343a42f837e4dae2b01917c04e8de3782e9170"
+  integrity sha512-Ee/R3SyN4BuynXcnTaekmaVdbDAEiNrHqjQIA37mHU8G9pf7aaAD4ZX3XjBLo6rsdcxA/gtkcNYZLt30ACgynw==
 
 now-and-later@^3.0.0:
   version "3.0.0"
@@ -5372,9 +5372,9 @@ pg-int8@1.0.1:
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
 pg-protocol@*:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/pg-protocol/-/pg-protocol-1.10.0.tgz#a473afcbb1c6e5dc3ac24869ba3dd563f8a1ae1b"
-  integrity sha512-IpdytjudNuLv8nhlHs/UrVBhU0e78J0oIS/0AVdTbWxSOkFUVdsHC/NrorO6nXsQNDTT1kzDSOMJubBQviX18Q==
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/pg-protocol/-/pg-protocol-1.10.2.tgz#76a07dd7f13ce67d7f9cf162dca181923b6641fa"
+  integrity sha512-Ci7jy8PbaWxfsck2dwZdERcDG2A0MG8JoQILs+uZNjABFuBuItAZCWUNz8sXRDMoui24rJw7WlXqgpMdBSN/vQ==
 
 pg-types@^2.2.0:
   version "2.2.0"
@@ -5521,9 +5521,9 @@ psl@^1.1.28:
     punycode "^2.3.1"
 
 pump@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.2.tgz#836f3edd6bc2ee599256c924ffe0d88573ddcbf8"
-  integrity sha512-tUPXtzlGM8FE3P0ZL6DVs/3P58k9nk8/jZeQCurTJylQA8qFYzHFfhBJkuqyE0FifOsQ0uKWekiZ5g8wtr28cw==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.3.tgz#151d979f1a29668dc0025ec589a455b53282268d"
+  integrity sha512-todwxLMY7/heScKmntwQG8CXVkWUOdYxIvY2s0VWAAMh/nd8SoYiRaKjlr7+iCs984f2P8zvrfWcDDYVb73NfA==
   dependencies:
     end-of-stream "^1.1.0"
     once "^1.3.1"
@@ -6095,9 +6095,9 @@ socks-proxy-agent@^7.0.0:
     socks "^2.6.2"
 
 socks@^2.6.2:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/socks/-/socks-2.8.4.tgz#07109755cdd4da03269bda4725baa061ab56d5cc"
-  integrity sha512-D3YaD0aRxR3mEcqnidIs7ReYJFVzWdd6fXJYUM8ixcQcJRGTka/b3saV0KflYhyVJXKhb947GndU35SxYNResQ==
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/socks/-/socks-2.8.5.tgz#bfe18f5ead1efc93f5ec90c79fa8bdccbcee2e64"
+  integrity sha512-iF+tNDQla22geJdTyJB1wM/qrX9DMRwWrciEPwWLPRWAUEM8sQiyxgckLxWT1f7+9VabJS0jTGGr4QgBuvi6Ww==
   dependencies:
     ip-address "^9.0.5"
     smart-buffer "^4.2.0"
@@ -6610,10 +6610,10 @@ undertaker@^2.0.0:
     last-run "^2.0.0"
     undertaker-registry "^2.0.0"
 
-undici-types@~6.21.0:
-  version "6.21.0"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.21.0.tgz#691d00af3909be93a7faa13be61b3a5b50ef12cb"
-  integrity sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==
+undici-types@~7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.8.0.tgz#de00b85b710c54122e44fbfd911f8d70174cd294"
+  integrity sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==
 
 undici@^5.22.1:
   version "5.29.0"
