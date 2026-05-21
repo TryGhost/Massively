@@ -412,24 +412,24 @@
   resolved "https://registry.yarnpkg.com/@sec-ant/readable-stream/-/readable-stream-0.4.1.tgz#60de891bb126abfdc5410fdc6166aca065f10a0c"
   integrity sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==
 
-"@sentry/core@10.52.0":
-  version "10.52.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.52.0.tgz#13842ef35db9909d64770d84656704cb929de445"
-  integrity sha512-VA/kAqLhkMnRWY2RXdBLyTemR9D4m7MVRy/gyapoq9yvllVPx9WXbvKgnMP2LQp7mFgT/oLFvw58aQKaYTGn3A==
+"@sentry/core@10.53.1":
+  version "10.53.1"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.53.1.tgz#68bed0e5857be6a8d5009268337c4153ab87514d"
+  integrity sha512-XG4ezlkyuAPjBC5+9kXC94rXXuqYTw9NRhfaDHssbTFaGnqBR8vQX2UUgZfY7ucbeelRDGfBu1sywoU+mB04uA==
 
-"@sentry/node-core@10.52.0":
-  version "10.52.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.52.0.tgz#44d2500cb08d47c0139bff492c8260812426cf3e"
-  integrity sha512-IG7MBtLRPQ2LuU+kbD14AFZroZgAeUmJQTP1FI/F8n56O31+p+9R703LuBTpvZr6sm+eRYDMWcGYYkfLHRVjwg==
+"@sentry/node-core@10.53.1":
+  version "10.53.1"
+  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.53.1.tgz#7c07d291dedbc3e34310b3dc3fb0430002a7b935"
+  integrity sha512-iH7SMcM/7jPbN+t7+7ussQOiIqI4BMOGt4VYWlV71/z7k0pY+YPaSvlfVkNXfISiDzFAKv0ecCY3BmsLMu1xDQ==
   dependencies:
-    "@sentry/core" "10.52.0"
-    "@sentry/opentelemetry" "10.52.0"
+    "@sentry/core" "10.53.1"
+    "@sentry/opentelemetry" "10.53.1"
     import-in-the-middle "^3.0.0"
 
-"@sentry/node@10.52.0":
-  version "10.52.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.52.0.tgz#bb702bb2f7ce2b381ff419949ad45c3bc7b42bef"
-  integrity sha512-9+p3KJUk3rHO1HOEZuSknP2RgKCJZONDm4HWgkVDtVBtocb66KLtVlMjc59d2/bWP7tM3wc877tpG30quFfU9g==
+"@sentry/node@10.53.1":
+  version "10.53.1"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.53.1.tgz#f400fd9fb5639b3a756807fba9f2d843305afe7d"
+  integrity sha512-rxHVil0tJAmz+keFcZCj1LaUdgdkK66E/l0gqh2p1209PNCGoD3lnClFr6vusy1aF3zF8O9JPtuMEJzXOKhs+w==
   dependencies:
     "@fastify/otel" "0.18.0"
     "@opentelemetry/api" "^1.9.1"
@@ -456,17 +456,17 @@
     "@opentelemetry/sdk-trace-base" "^2.6.1"
     "@opentelemetry/semantic-conventions" "^1.40.0"
     "@prisma/instrumentation" "7.6.0"
-    "@sentry/core" "10.52.0"
-    "@sentry/node-core" "10.52.0"
-    "@sentry/opentelemetry" "10.52.0"
+    "@sentry/core" "10.53.1"
+    "@sentry/node-core" "10.53.1"
+    "@sentry/opentelemetry" "10.53.1"
     import-in-the-middle "^3.0.0"
 
-"@sentry/opentelemetry@10.52.0":
-  version "10.52.0"
-  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.52.0.tgz#72a6b99abefcced8945c88af7ace9863435af3b9"
-  integrity sha512-Sc7StsvC0bwhMcgDfTRWUIexO5cNzzKUurvUwtpgQUnxO7AzexU3lkY3yHYDsCbWYAEQMXAgQYQtbcqoh+Ie7g==
+"@sentry/opentelemetry@10.53.1":
+  version "10.53.1"
+  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.53.1.tgz#845fffc08f657862d2ff61447873daf3fdaa7065"
+  integrity sha512-Zok6UXla0mFOjd1YnVb1TZtQNOry9v93fXUqx8jmDaygwWM2BwvP8rBQabLz0/OZXo8+35oge+Vmw+QY5aesnA==
   dependencies:
-    "@sentry/core" "10.52.0"
+    "@sentry/core" "10.53.1"
 
 "@sindresorhus/is@^7.0.1":
   version "7.2.0"
@@ -2880,12 +2880,12 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
-gscan@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/gscan/-/gscan-6.1.0.tgz#0715cd6945d7db1e111184b51668745df4db914e"
-  integrity sha512-FWAOKmJzxzBDXuZijjDkkpBXsyerw1N/de+VGg1tZnOcvC73rtPVKi31pFfNuj4n1AcrQWMom+2+QnhxbY64uQ==
+gscan@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/gscan/-/gscan-6.2.0.tgz#575ac7dd929f01684a00a4cbc528b294c0ffc974"
+  integrity sha512-OWhXoWTFWZJu4AydEz/9uaPb7Px9lJ1an+D+WqpDFC5nH/ysoHMgTWwfghpoifO9iqhm71WIx8Lme5kvmRJeDA==
   dependencies:
-    "@sentry/node" "10.52.0"
+    "@sentry/node" "10.53.1"
     "@tryghost/config" "2.2.0"
     "@tryghost/debug" "2.2.0"
     "@tryghost/errors" "3.2.1"
