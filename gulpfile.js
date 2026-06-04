@@ -4,7 +4,7 @@ const pump = require('pump');
 // gulp plugins and utils
 var livereload = require('gulp-livereload');
 var sass = require('gulp-sass')(require('node-sass'));
-var zip = require('gulp-zip');
+var zip = require('gulp-zip').default;
 var beeper = require('beeper');
 
 function serve(done) {
@@ -28,8 +28,6 @@ function hbs(done) {
     ], handleError(done));
 }
 
-sass.compiler = require('node-sass');
-
 function css(done) {
     pump([
         src('./assets/main/sass/*.scss', {sourcemaps: true}),
@@ -45,11 +43,14 @@ function zipper(done) {
     var filename = themeName + '.zip';
 
     pump([
+        // encoding: false keeps binary assets (fonts, images) as buffers; gulp 5 /
+        // vinyl-fs 4 otherwise decode files as UTF-8 and corrupt them in the zip.
         src([
             '**',
             '!node_modules', '!node_modules/**',
-            '!dist', '!dist/**'
-        ]),
+            '!dist', '!dist/**',
+            '!pnpm-lock.yaml'
+        ], {encoding: false}),
         zip(filename),
         dest(targetDir)
     ], handleError(done));
