@@ -21,8 +21,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2
       gulp-sass:
-        specifier: 5.1.0
-        version: 5.1.0
+        specifier: 6.0.1
+        version: 6.0.1
       gulp-sourcemaps:
         specifier: 3.0.0
         version: 3.0.0
@@ -1531,8 +1531,8 @@ packages:
     resolution: {integrity: sha512-T0AXOEVoKYzLIBlwEZ7LtAx2w4ExIozIoxVeYEVLFbdxI7i0sWvFDq0F8mm47djixDF3vAqDPoyGwh3Sg/PWtQ==}
     engines: {node: '>=18'}
 
-  gulp-sass@5.1.0:
-    resolution: {integrity: sha512-7VT0uaF+VZCmkNBglfe1b34bxn/AfcssquLKVDYnCDJ3xNBaW7cUuI3p3BQmoKcoKFrs9jdzUxyb+u+NGfL4OQ==}
+  gulp-sass@6.0.1:
+    resolution: {integrity: sha512-4wonidxB8lGPHvahelpGavUBJAuERSl+OIVxPCyQthK4lSJhZ/u3/qjFcyAtnMIXDl6fXTn34H4BXsN7gt54kQ==}
     engines: {node: '>=12'}
 
   gulp-sourcemaps@3.0.0:
@@ -5089,7 +5089,7 @@ snapshots:
       chalk: 5.6.2
       easy-transform-stream: 1.0.1
 
-  gulp-sass@5.1.0:
+  gulp-sass@6.0.1:
     dependencies:
       lodash.clonedeep: 4.5.0
       picocolors: 1.1.1
