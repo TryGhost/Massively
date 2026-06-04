@@ -13,13 +13,14 @@
     },
     "scripts": {
         "dev": "gulp",
+        "build": "gulp build",
         "zip": "gulp zip",
-        "pretest": "gulp build",
+        "pretest": "pnpm zip",
         "test": "gscan .",
-        "test:ci": "gscan --fatal --verbose .",
-        "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
+        "pretest:ci": "pnpm zip",
+        "test:ci": "gscan --fatal --verbose ."
     },
+    "packageManager": "pnpm@11.5.1",
     "author": {
         "name": "Ghost Foundation",
         "email": "hello@ghost.org",
@@ -54,7 +55,7 @@
         "gscan": "6.2.1",
         "gulp": "5.0.1",
         "gulp-livereload": "4.0.2",
-        "gulp-sass": "6.0.1",
+        "gulp-sass": "5.1.0",
         "gulp-sourcemaps": "3.0.0",
         "gulp-watch": "5.0.1",
         "gulp-zip": "6.1.0",

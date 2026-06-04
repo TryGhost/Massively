@@ -43,17 +43,20 @@ There are two main changes compared to the original template files:
 - The original template contained separate `/assets` and `/images` directories. Ghost Themes require that all assets be nested under a top-level `/assets` directory, so these are moved to `/assets/main` and `/assets/images`, respectively.
 - In order to make minor modifications and add some new custom styles, one additional SaSS file is added under `/assets/main/sass/layout/ghost.sass` and included at the bottom of the `main.sass` file.
 
-To work on styles in this theme, you'll need to run a local development environment to build/watch for changes. Once cloned and installed with npm/yarn, the following `gulp` build tasks are available:
+To work on styles in this theme, you'll need to run a local development environment to build/watch for changes. Once cloned and installed with [pnpm](https://pnpm.io/), the following build tasks are available:
 
 ```bash
+# Install dependencies
+pnpm install
+
 # Build files locally and watch for changes
-gulp
+pnpm dev
 
 # Build production zip locally and save to /dist
-gulp zip
+pnpm zip
 
 # Run compatibility test against latest version of Ghost
-yarn test
+pnpm test
 ```
 
 Original template files and design by [@ajlkn](https://twitter.com/ajlkn)
