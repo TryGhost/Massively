@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,12 +11,12 @@
 
 	.image {
 		border: 0;
-		border-radius: _size(border-radius);
+		border-radius: functions.size(border-radius);
 		display: inline-block;
 		position: relative;
 
 		img {
-			border-radius: _size(border-radius);
+			border-radius: functions.size(border-radius);
 			display: block;
 		}
 
@@ -40,7 +43,7 @@
 
 		&.fit {
 			display: block;
-			margin: (_size(element-margin) * 1.25) 0;
+			margin: (functions.size(element-margin) * 1.25) 0;
 			width: 100%;
 
 			&:first-child {
@@ -54,7 +57,7 @@
 
 		&.main {
 			display: block;
-			margin: (_size(element-margin) * 2) 0;
+			margin: (functions.size(element-margin) * 2) 0;
 			width: 100%;
 
 			&:first-child {
@@ -66,13 +69,13 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoints.breakpoint('<=small') {
 			&.fit {
-				margin: _size(element-margin) 0;
+				margin: functions.size(element-margin) 0;
 			}
 
 			&.main {
-				margin: _size(element-margin) 0;
+				margin: functions.size(element-margin) 0;
 			}
 		}
 	}
@@ -81,12 +84,12 @@
 		overflow: hidden;
 
 		img {
-			@include vendor('transition', 'transform #{_duration(transition)} ease-out');
+			@include vendor.vendor('transition', 'transform #{functions.duration(transition)} ease-out');
 		}
 
 		&:hover {
 			img {
-				@include vendor('transform', 'scale(1.05)');
+				@include vendor.vendor('transform', 'scale(1.05)');
 			}
 		}
 	}

@@ -1,3 +1,7 @@
+@use "../libs/breakpoints";
+@use "../libs/fixed-grid";
+@use "../libs/functions";
+@use "../libs/mixins";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,16 +11,16 @@
 /* Main */
 
 	#main {
-		background-color: _palette(bg);
+		background-color: functions.palette(bg);
 		position: relative;
 		margin: 0 auto;
-		width: calc(100% - #{_size(padding) * 2});
-		max-width: _size(wrapper);
+		width: calc(100% - #{functions.size(padding) * 2});
+		max-width: functions.size(wrapper);
 		z-index: 2;
 
 		> * {
-			@include padding((_size(padding) * 2), (_size(padding) * 2));
-			border-top: solid 2px _palette(border);
+			@include mixins.padding((functions.size(padding) * 2), (functions.size(padding) * 2));
+			border-top: solid 2px functions.palette(border);
 			margin: 0;
 
 			&:first-child {
@@ -29,7 +33,7 @@
 		}
 
 		> .post {
-			@include padding((_size(padding) * 4), (_size(padding) * 4));
+			@include mixins.padding((functions.size(padding) * 4), (functions.size(padding) * 4));
 
 			header {
 				&.major {
@@ -40,7 +44,7 @@
 					> h1, h2 {
 						font-size: 4rem;
 						line-height: 1.1;
-						margin: 0 0 _size(element-margin) 0;
+						margin: 0 0 functions.size(element-margin) 0;
 					}
 				}
 			}
@@ -49,24 +53,24 @@
 				text-align: center;
 			}
 
-			@include breakpoint('<=large') {
-				@include padding((_size(padding) * 3), (_size(padding) * 2));
+			@include breakpoints.breakpoint('<=large') {
+				@include mixins.padding((functions.size(padding) * 3), (functions.size(padding) * 2));
 			}
 
-			@include breakpoint('<=small') {
-				@include padding((_size(padding) * 2), (_size(padding) * 1));
+			@include breakpoints.breakpoint('<=small') {
+				@include mixins.padding((functions.size(padding) * 2), (functions.size(padding) * 1));
 
 				header {
 					&.major {
 						> .date {
 							margin-top: -1rem;
-							margin-bottom: _size(element-margin);
+							margin-bottom: functions.size(element-margin);
 						}
 
 						> h1, h2 {
 							font-size: 2.5rem;
 							line-height: 1.2;
-							margin: 0 0 (_size(element-margin) * 0.75) 0;
+							margin: 0 0 (functions.size(element-margin) * 0.75) 0;
 						}
 					}
 				}
@@ -74,9 +78,9 @@
 		}
 
 		> .posts {
-			@include fixed-grid((
+			@include fixed-grid.fixed-grid((
 				columns:			2,
-				gutters:			(_size(padding) * 4),
+				gutters:			(functions.size(padding) * 4),
 				horizontal-align:	center,
 				vertical-align:		flex-start,
 				flush:				false
@@ -85,7 +89,7 @@
 			padding: 0;
 
 			> article {
-				border-color: _palette(border);
+				border-color: functions.palette(border);
 				border-left-width: 2px;
 				border-style: solid;
 				border-top-width: 2px;
@@ -104,18 +108,18 @@
 				}
 			}
 
-			@include breakpoint('<=medium') {
-				@include fixed-grid-resize((
+			@include breakpoints.breakpoint('<=medium') {
+				@include fixed-grid.fixed-grid-resize((
 					columns:			2,
-					gutters:			(_size(padding) * 2.5),
+					gutters:			(functions.size(padding) * 2.5),
 					flush:				false
 				));
 			}
 
-			@include breakpoint('<=small') {
-				@include fixed-grid-resize((
+			@include breakpoints.breakpoint('<=small') {
+				@include fixed-grid.fixed-grid-resize((
 					columns:			1,
-					gutters:			(_size(padding) * 2),
+					gutters:			(functions.size(padding) * 2),
 					prev-columns:		2,
 					flush:				false
 				));
@@ -146,13 +150,13 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoints.breakpoint('<=small') {
 			> * {
-				@include padding((_size(padding) * 1), (_size(padding) * 1));
+				@include mixins.padding((functions.size(padding) * 1), (functions.size(padding) * 1));
 			}
 		}
 
-		@include breakpoint('<=xsmall') {
+		@include breakpoints.breakpoint('<=xsmall') {
 			width: 100%;
 		}
 	}
@@ -160,10 +164,10 @@
     .has-serif-title #main > .posts header > h2,
     .has-serif-title #main > .post header.major > h1,
     .has-serif-title #main > .post header.major > h2 {
-        font-family: _font(family);
+        font-family: functions.font(family);
     }
 
     .has-sans-body header.major > p,
     .has-sans-body .posts article p {
-        font-family: _font(family-heading);
+        font-family: functions.font(family-heading);
     }

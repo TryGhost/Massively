@@ -1,3 +1,9 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
+@use "../base/typography";
+@use "../components/button";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,14 +13,14 @@
 /* Intro */
 
 	#intro {
-		@include color-typography(invert);
-		@include color-button(invert);
-		@include padding(_size(padding) * 4, _size(padding) * 2);
-		@include vendor('align-items', 'center');
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'column');
-		@include vendor('justify-content', 'flex-end');
-		@include vendor('transition', (
+		@include typography.color-typography(invert);
+		@include button.color-button(invert);
+		@include mixins.padding(functions.size(padding) * 4, functions.size(padding) * 2);
+		@include vendor.vendor('align-items', 'center');
+		@include vendor.vendor('display', 'flex');
+		@include vendor.vendor('flex-direction', 'column');
+		@include vendor.vendor('justify-content', 'flex-end');
+		@include vendor.vendor('transition', (
 			'opacity 1s ease',
 			'transform 1s ease'
 		));
@@ -40,16 +46,16 @@
 			margin-top: -20rem;
 
 			.logo {
-				@include vendor('transform', 'translateY(2rem)');
+				@include vendor.vendor('transform', 'translateY(2rem)');
 				opacity: 0;
 				visibility: hidden;
 			}
 		}
 
 		&.hidden {
-			@include vendor('pointer-events', 'none');
-			@include vendor('transform', 'translateY(2rem)');
-			@include vendor('transition', (
+			@include vendor.vendor('pointer-events', 'none');
+			@include vendor.vendor('transform', 'translateY(2rem)');
+			@include vendor.vendor('transition', (
 				'opacity 0.5s ease',
 				'transform 0.5s ease',
 				'visibility 0.5s'
@@ -59,7 +65,7 @@
 
 			& + #header {
 				.logo {
-					@include vendor('transform', 'translateY(0)');
+					@include vendor.vendor('transform', 'translateY(0)');
 					opacity: 1;
 					visibility: visible;
 				}
@@ -67,19 +73,19 @@
 		}
 
 		body.is-preload & {
-			@include vendor('transform', 'translateY(2rem)');
+			@include vendor.vendor('transform', 'translateY(2rem)');
 			opacity: 0;
 
 			&:not(.hidden) {
 				& + #header + #nav {
-					@include vendor('transform', 'translateY(4rem)');
+					@include vendor.vendor('transform', 'translateY(4rem)');
 					opacity: 0;
 				}
 			}
 		}
 
-		@include breakpoint('<=medium') {
-			@include padding(_size(padding) * 2, _size(padding) * 2);
+		@include breakpoints.breakpoint('<=medium') {
+			@include mixins.padding(functions.size(padding) * 2, functions.size(padding) * 2);
 			min-height: 90vh;
 
 			p {
@@ -93,14 +99,14 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
-			@include padding(_size(padding) * 1.5, _size(padding) * 1);
+		@include breakpoints.breakpoint('<=small') {
+			@include mixins.padding(functions.size(padding) * 1.5, functions.size(padding) * 1);
 			min-height: 80vh;
 
 			h1 {
 				font-size: 3.25rem;
 				line-height: 1.1;
-				margin-bottom: _size(element-margin) * 0.5;
+				margin-bottom: functions.size(element-margin) * 0.5;
 			}
 
 			p {

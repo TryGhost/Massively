@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -11,19 +14,19 @@
 	input[type="button"],
 	button,
 	.button {
-		@include vendor('appearance', 'none');
-		@include vendor('transition', (
-			'background-color #{_duration(transition)} ease-in-out',
-			'box-shadow #{_duration(transition)} ease-in-out',
-			'color #{_duration(transition)} ease-in-out'
+		@include vendor.vendor('appearance', 'none');
+		@include vendor.vendor('transition', (
+			'background-color #{functions.duration(transition)} ease-in-out',
+			'box-shadow #{functions.duration(transition)} ease-in-out',
+			'color #{functions.duration(transition)} ease-in-out'
 		));
 		border: 0;
 		border-radius: 0;
 		cursor: pointer;
 		display: inline-block;
-		font-family: _font(family-heading);
+		font-family: functions.font(family-heading);
 		font-size: 0.8rem;
-		font-weight: _font(weight-heading);
+		font-weight: functions.font(weight-heading);
 		letter-spacing: 0.075em;
 		height: 3rem;
 		line-height: 3rem;
@@ -83,7 +86,7 @@
 			padding: 0 2.75rem;
 		}
 
-		@include breakpoint('<=medium') {
+		@include breakpoints.breakpoint('<=medium') {
 			font-size: 0.9rem;
 			height: 3.25rem;
 			line-height: 3.25rem;
@@ -97,13 +100,13 @@
 
 		&.disabled,
 		&:disabled {
-			@include vendor('pointer-events', 'none');
+			@include vendor.vendor('pointer-events', 'none');
 			opacity: 0.25;
 		}
 	}
 
 	@mixin color-button($p: null) {
-		$highlight: _palette($p, highlight);
+		$highlight: functions.palette($p, highlight);
 
 		input[type="submit"],
 		input[type="reset"],
@@ -111,8 +114,8 @@
 		button,
 		.button {
 			background-color: transparent;
-			box-shadow: inset 0 0 0 2px _palette($p, fg-bold);
-			color: _palette($p, fg-bold) !important;
+			box-shadow: inset 0 0 0 2px functions.palette($p, fg-bold);
+			color: functions.palette($p, fg-bold) !important;
 
 			&:hover {
 				box-shadow: inset 0 0 0 2px var(--color-primary);
@@ -120,9 +123,9 @@
 			}
 
 			&.primary {
-				background-color: _palette($p, fg-bold);
+				background-color: functions.palette($p, fg-bold);
 				box-shadow: none;
-				color: _palette($p, bg) !important;
+				color: functions.palette($p, bg) !important;
 
 				&:hover {
 					background-color: var(--color-primary);

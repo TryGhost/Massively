@@ -1,10 +1,10 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
-@import 'libs/html-grid';
-@import 'libs/fixed-grid';
+@use 'libs/vars';
+@use 'libs/functions';
+@use 'libs/mixins';
+@use 'libs/vendor';
+@use 'libs/breakpoints';
+@use 'libs/html-grid';
+@use 'libs/fixed-grid';
 @import 'font-awesome.min.css';
 
 /*
@@ -16,7 +16,7 @@
 /* Wrapper */
 
 	#wrapper {
-		background-color:		_palette(wrapper-bg);
+		background-color:		functions.palette(wrapper-bg);
 		background-image:		url('../../images/overlay.png'),	linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),	url('../../images/bg.jpg');
 		background-size:		auto,								auto,														100% auto;
 		background-position:	center,								center,														top center;
@@ -38,7 +38,7 @@
 
 			&:not(.hidden) {
 				& + #header + #nav {
-					@include vendor('transform', 'none');
+					@include vendor.vendor('transform', 'none');
 					opacity: 1;
 				}
 			}

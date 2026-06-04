@@ -1,3 +1,7 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
+@use "../base/typography";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,34 +11,34 @@
 /* Header */
 
 	#header {
-		@include color-typography(invert);
-		@include vendor('align-items', 'center');
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'column');
-		@include vendor('justify-content', 'flex-end');
-		@include vendor('pointer-events', 'none');
-		@include vendor('user-select', 'none');
+		@include typography.color-typography(invert);
+		@include vendor.vendor('align-items', 'center');
+		@include vendor.vendor('display', 'flex');
+		@include vendor.vendor('flex-direction', 'column');
+		@include vendor.vendor('justify-content', 'flex-end');
+		@include vendor.vendor('pointer-events', 'none');
+		@include vendor.vendor('user-select', 'none');
 		height: 20rem;
-		padding-bottom: (_size(padding) * 4);
+		padding-bottom: (functions.size(padding) * 4);
 		position: relative;
 		text-align: center;
 		z-index: 2;
 
 		.logo {
-			@include vendor('transition', (
-				'border-color #{_duration(transition)} ease-in-out',
-				'color #{_duration(transition)} ease-in-out',
+			@include vendor.vendor('transition', (
+				'border-color #{functions.duration(transition)} ease-in-out',
+				'color #{functions.duration(transition)} ease-in-out',
 				'opacity 0.5s ease',
 				'transform 0.5s ease',
 				'visibility 0.5s'
 			));
-			@include vendor('pointer-events', 'auto');
+			@include vendor.vendor('pointer-events', 'auto');
 			border-style: solid;
-			border-color: _palette(invert, border);
+			border-color: functions.palette(invert, border);
 			border-width: 5px !important;
-			font-family: _font(family-heading);
+			font-family: functions.font(family-heading);
 			font-size: 2.25rem;
-			font-weight: _font(weight-heading);
+			font-weight: functions.font(weight-heading);
 			letter-spacing: 0.075em;
 			line-height: 1;
 			padding: 1rem 1.75rem;
@@ -47,13 +51,13 @@
 			}
 		}
 
-		@include breakpoint('<=medium') {
+		@include breakpoints.breakpoint('<=medium') {
 			height: 14rem;
-			padding-bottom: (_size(padding) * 2);
+			padding-bottom: (functions.size(padding) * 2);
 		}
 
-		@include breakpoint('<=small') {
-			padding-bottom: (_size(padding) * 1.5);
+		@include breakpoints.breakpoint('<=small') {
+			padding-bottom: (functions.size(padding) * 1.5);
 
 			.logo {
 				font-size: 1.75rem;

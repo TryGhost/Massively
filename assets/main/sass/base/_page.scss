@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -21,7 +24,7 @@
 		}
 
 	// Ensures page width is always >=320px.
-		@include breakpoint('<=xsmall') {
+		@include breakpoints.breakpoint('<=xsmall') {
 			html, body {
 				min-width: 320px;
 			}
@@ -39,13 +42,13 @@
 
 	body {
 
-		background-color: _palette(invert, bg);
+		background-color: functions.palette(invert, bg);
 
 		// Stops initial animations until page loads.
 			&.is-preload {
 				*, *:before, *:after {
-					@include vendor('animation', 'none !important');
-					@include vendor('transition', 'none !important');
+					@include vendor.vendor('animation', 'none !important');
+					@include vendor.vendor('transition', 'none !important');
 				}
 			}
 

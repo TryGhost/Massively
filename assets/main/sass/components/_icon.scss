@@ -1,3 +1,4 @@
+@use "../libs/mixins";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,7 +8,7 @@
 /* Icon */
 
 	.icon {
-		@include icon;
+		@include mixins.icon;
 		border-bottom: none;
 		position: relative;
 

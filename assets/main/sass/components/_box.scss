@@ -1,3 +1,4 @@
+@use "../libs/functions";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,9 +8,9 @@
 /* Box */
 
 	.box {
-		border-radius: _size(border-radius);
+		border-radius: functions.size(border-radius);
 		border: solid 2px;
-		margin-bottom: _size(element-margin);
+		margin-bottom: functions.size(element-margin);
 		padding: 1.5rem;
 
 		> :last-child,
@@ -27,7 +28,7 @@
 
 	@mixin color-box($p: null) {
  		.box {
- 			border-color: _palette($p, border);
+ 			border-color: functions.palette($p, border);
  		}
 	}
 

@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,19 +10,19 @@
 /* Actions */
 
 	ul.actions {
-		@include vendor('display', 'flex');
+		@include vendor.vendor('display', 'flex');
 		cursor: default;
 		list-style: none;
-		margin-left: (_size(element-margin) * -0.5);
+		margin-left: (functions.size(element-margin) * -0.5);
 		padding-left: 0;
 
 		li {
-			padding: 0 0 0 (_size(element-margin) * 0.5);
+			padding: 0 0 0 (functions.size(element-margin) * 0.5);
 			vertical-align: middle;
 		}
 
 		&.special {
-			@include vendor('justify-content', 'center');
+			@include vendor.vendor('justify-content', 'center');
 			width: 100%;
 			margin-left: 0;
 
@@ -31,11 +34,11 @@
 		}
 
 		&.stacked {
-			@include vendor('flex-direction', 'column');
+			@include vendor.vendor('flex-direction', 'column');
 			margin-left: 0;
 
 			li {
-				padding: (_size(element-margin) * 0.65) 0 0 0;
+				padding: (functions.size(element-margin) * 0.65) 0 0 0;
 
 				&:first-child {
 					padding-top: 0;
@@ -44,11 +47,11 @@
 		}
 
 		&.fit {
-			width: calc(100% + #{_size(element-margin) * 0.5});
+			width: calc(100% + #{functions.size(element-margin) * 0.5});
 
 			li {
-				@include vendor('flex-grow', '1');
-				@include vendor('flex-shrink', '1');
+				@include vendor.vendor('flex-grow', '1');
+				@include vendor.vendor('flex-shrink', '1');
 				width: 100%;
 
 				> * {
@@ -61,16 +64,16 @@
 			}
 		}
 
-		@include breakpoint('<=xsmall') {
+		@include breakpoints.breakpoint('<=xsmall') {
 			&:not(.fixed) {
-				@include vendor('flex-direction', 'column');
+				@include vendor.vendor('flex-direction', 'column');
 				margin-left: 0;
 				width: 100% !important;
 
 				li {
-					@include vendor('flex-grow', '1');
-					@include vendor('flex-shrink', '1');
-					padding: (_size(element-margin) * 0.5) 0 0 0;
+					@include vendor.vendor('flex-grow', '1');
+					@include vendor.vendor('flex-shrink', '1');
+					padding: (functions.size(element-margin) * 0.5) 0 0 0;
 					text-align: center;
 					width: 100%;
 

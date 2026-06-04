@@ -1,3 +1,8 @@
+@use "sass:list";
+@use "sass:math";
+@use "functions";
+@use "vendor";
+
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
 /// @param {string} $where Optional pseudoelement to target (before or after).
@@ -35,11 +40,11 @@
 
 	$x: 0.1em;
 
-	@if unit(_size(element-margin)) == 'rem' {
+	@if math.unit(functions.size(element-margin)) == 'rem' {
 		$x: 0.1rem;
 	}
 
-	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max($x, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
+	padding: ($tb + list.nth($pad,1)) ($lr + list.nth($pad,2)) math.max($x, $tb - functions.size(element-margin) + list.nth($pad,3)) ($lr + list.nth($pad,4)) #{$important};
 
 }
 
@@ -48,15 +53,15 @@
 /// @return {string} Encoded SVG data URL.
 @function svg-url($svg) {
 
-	$svg: str-replace($svg, '"', '\'');
-	$svg: str-replace($svg, '%', '%25');
-	$svg: str-replace($svg, '<', '%3C');
-	$svg: str-replace($svg, '>', '%3E');
-	$svg: str-replace($svg, '&', '%26');
-	$svg: str-replace($svg, '#', '%23');
-	$svg: str-replace($svg, '{', '%7B');
-	$svg: str-replace($svg, '}', '%7D');
-	$svg: str-replace($svg, ';', '%3B');
+	$svg: vendor.str-replace($svg, '"', '\'');
+	$svg: vendor.str-replace($svg, '%', '%25');
+	$svg: vendor.str-replace($svg, '<', '%3C');
+	$svg: vendor.str-replace($svg, '>', '%3E');
+	$svg: vendor.str-replace($svg, '&', '%26');
+	$svg: vendor.str-replace($svg, '#', '%23');
+	$svg: vendor.str-replace($svg, '{', '%7B');
+	$svg: vendor.str-replace($svg, '}', '%7D');
+	$svg: vendor.str-replace($svg, ';', '%3B');
 
 	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
 

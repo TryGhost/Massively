@@ -1,3 +1,5 @@
+@use "../libs/functions";
+@use "../libs/vendor";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -37,11 +39,11 @@
 			li {
 				.icon {
 					&:before {
-						@include vendor('transition', (
-							'color #{_duration(transition)} ease-in-out',
-							'background-color #{_duration(transition)} ease-in-out',
-							'border-color #{_duration(transition)} ease-in-out',
-							'box-shadow #{_duration(transition)} ease-in-out'
+						@include vendor.vendor('transition', (
+							'color #{functions.duration(transition)} ease-in-out',
+							'background-color #{functions.duration(transition)} ease-in-out',
+							'border-color #{functions.duration(transition)} ease-in-out',
+							'box-shadow #{functions.duration(transition)} ease-in-out'
 						));
 
 						font-size: 1rem;
