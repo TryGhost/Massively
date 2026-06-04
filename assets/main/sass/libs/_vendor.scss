@@ -1,3 +1,8 @@
+@use "sass:list";
+@use "sass:math";
+@use "sass:meta";
+@use "sass:string";
+
 // vendor.scss v1.0 | @ajlkn | MIT licensed */
 
 // Vars.
@@ -258,24 +263,26 @@
 
 		$result: null;
 
-		@if type-of($index) != number {
-			@warn "$index: #{quote($index)} is not a number for `remove-nth`.";
+		@if meta.type-of($index) != number {
+			@warn "$index: #{string.quote($index)} is not a number for `remove-nth`.";
 		}
 		@else if $index == 0 {
 			@warn "List index 0 must be a non-zero integer for `remove-nth`.";
 		}
-		@else if abs($index) > length($list) {
-			@warn "List index is #{$index} but list is only #{length($list)} item long for `remove-nth`.";
+		@else if math.abs($index) > list.length($list) {
+			@warn "List index is #{$index} but list is only #{list.length($list)} item long for `remove-nth`.";
 		}
 		@else {
 
 			$result: ();
-			$index: if($index < 0, length($list) + $index + 1, $index);
+			@if $index < 0 {
+				$index: list.length($list) + $index + 1;
+			}
 
-			@for $i from 1 through length($list) {
+			@for $i from 1 through list.length($list) {
 
 				@if $i != $index {
-					$result: append($result, nth($list, $i));
+					$result: list.append($result, list.nth($list, $i));
 				}
 
 			}
@@ -294,10 +301,10 @@
 	/// @return {string} Updated string.
 	@function str-replace($string, $search, $replace: '') {
 
-		$index: str-index($string, $search);
+		$index: string.index($string, $search);
 
 		@if $index {
-			@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+			@return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
 		}
 
 		@return $string;
@@ -312,7 +319,7 @@
 	@function str-replace-all($strings, $search, $replace: '') {
 
 		@each $string in $strings {
-			$strings: set-nth($strings, index($strings, $string), str-replace($string, $search, $replace));
+			$strings: list.set-nth($strings, list.index($strings, $string), str-replace($string, $search, $replace));
 		}
 
 		@return $strings;
@@ -338,16 +345,16 @@
 	@mixin vendor($property, $value) {
 
 		// Determine if property should expand.
-			$expandProperty: index($vendor-properties, $property);
+			$expandProperty: list.index($vendor-properties, $property);
 
 		// Determine if value should expand (and if so, add '-prefix-' placeholder).
 			$expandValue: false;
 
 			@each $x in $value {
 				@each $y in $vendor-values {
-					@if $y == str-slice($x, 1, str-length($y)) {
+					@if $y == string.slice($x, 1, string.length($y)) {
 
-						$value: set-nth($value, index($value, $x), '-prefix-' + $x);
+						$value: list.set-nth($value, list.index($value, $x), '-prefix-' + $x);
 						$expandValue: true;
 
 					}
@@ -362,7 +369,7 @@
 			}
 
 		// Expand just the value?
-			@elseif $expandValue {
+			@else if $expandValue {
 			    @each $vendor in $vendor-prefixes {
 			        #{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
 			    }

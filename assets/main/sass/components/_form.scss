@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,23 +12,23 @@
 /* Form */
 
 	form {
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 
 		> :last-child {
 			margin-bottom: 0;
 		}
 
 		> .fields  {
-			$gutter: (_size(element-margin) * 0.75);
+			$gutter: (functions.size(element-margin) * 0.75);
 
-			@include vendor('display', 'flex');
-			@include vendor('flex-wrap', 'wrap');
+			@include vendor.vendor('display', 'flex');
+			@include vendor.vendor('flex-wrap', 'wrap');
 			width: calc(100% + #{$gutter * 2});
-			margin: ($gutter * -1) 0 _size(element-margin) ($gutter * -1);
+			margin: ($gutter * -1) 0 functions.size(element-margin) ($gutter * -1);
 
 			> .field {
-				@include vendor('flex-grow', '0');
-				@include vendor('flex-shrink', '0');
+				@include vendor.vendor('flex-grow', '0');
+				@include vendor.vendor('flex-shrink', '0');
 				padding: $gutter 0 0 $gutter;
 				width: calc(100% - #{$gutter * 1});
 
@@ -32,7 +37,7 @@
 				}
 
 				&.third {
-					width: calc(#{100% / 3} - #{$gutter * (1 / 3)});
+					width: calc(#{'100%/3'} - #{$gutter * math.div(1, 3)});
 				}
 
 				&.quarter {
@@ -41,12 +46,12 @@
 			}
 		}
 
-		@include breakpoint('<=xsmall') {
+		@include breakpoints.breakpoint('<=xsmall') {
 			> .fields {
-				$gutter: (_size(element-margin) * 0.75);
+				$gutter: (functions.size(element-margin) * 0.75);
 
 				width: calc(100% + #{$gutter * 2});
-				margin: ($gutter * -1) 0 _size(element-margin) ($gutter * -1);
+				margin: ($gutter * -1) 0 functions.size(element-margin) ($gutter * -1);
 
 				> .field {
 					padding: $gutter 0 0 $gutter;
@@ -70,15 +75,15 @@
 
 	label {
 		display: block;
-		font-family: _font(family-heading);
-		font-weight: _font(weight-heading);
+		font-family: functions.font(family-heading);
+		font-weight: functions.font(weight-heading);
 		line-height: 1.5;
 		letter-spacing: 0.075em;
 		font-size: 0.8rem;
 		text-transform: uppercase;
-		margin: 0 0 (_size(element-margin) * 0.375) 0;
+		margin: 0 0 (functions.size(element-margin) * 0.375) 0;
 
-		@include breakpoint('<=medium') {
+		@include breakpoints.breakpoint('<=medium') {
 			font-size: 0.9rem;
 		}
 	}
@@ -88,7 +93,7 @@
 	input[type="email"],
 	select,
 	textarea {
-		@include vendor('appearance', 'none');
+		@include vendor.vendor('appearance', 'none');
 		background: transparent;
 		border-radius: 0;
 		border: solid 2px;
@@ -108,8 +113,8 @@
 		background-size: 1.25rem;
 		background-repeat: no-repeat;
 		background-position: calc(100% - 1rem) center;
-		height: _size(element-height);
-		padding-right: _size(element-height);
+		height: functions.size(element-height);
+		padding-right: functions.size(element-height);
 		text-overflow: ellipsis;
 
 		&:focus {
@@ -127,7 +132,7 @@
 	input[type="password"],
 	input[type="email"],
 	select {
-		height: _size(element-height);
+		height: functions.size(element-height);
 	}
 
 	textarea {
@@ -136,7 +141,7 @@
 
 	input[type="checkbox"],
 	input[type="radio"], {
-		@include vendor('appearance', 'none');
+		@include vendor.vendor('appearance', 'none');
 		display: block;
 		float: left;
 		margin-right: -2rem;
@@ -145,15 +150,15 @@
 		z-index: -1;
 
 		& + label {
-			@include icon;
+			@include mixins.icon;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1rem;
 			letter-spacing: 0;
-			font-family: _font(family);
+			font-family: functions.font(family);
 			text-transform: none;
-			font-weight: _font(weight);
-			padding-left: (_size(element-height) * 0.6) + 1rem;
+			font-weight: functions.font(weight);
+			padding-left: (functions.size(element-height) * 0.6) + 1rem;
 			padding-right: 1rem;
 			position: relative;
 
@@ -162,13 +167,13 @@
 				border: solid 2px;
 				content: '';
 				display: inline-block;
-				height: (_size(element-height) * 0.6);
+				height: (functions.size(element-height) * 0.6);
 				left: 0;
-				line-height: (_size(element-height) * 0.575);
+				line-height: (functions.size(element-height) * 0.575);
 				position: absolute;
 				text-align: center;
 				top: -0.125rem;
-				width: (_size(element-height) * 0.6);
+				width: (functions.size(element-height) * 0.6);
 			}
 		}
 
@@ -213,7 +218,7 @@
 
 	@mixin color-form($p: null) {
 		label {
-			color: _palette($p, fg-bold);
+			color: functions.palette($p, fg-bold);
 		}
 
 		input[type="text"],
@@ -221,7 +226,7 @@
 		input[type="email"],
 		select,
 		textarea {
-			border-color: _palette($p, border);
+			border-color: functions.palette($p, border);
 
 			&:focus {
 				border-color: var(--color-primary);
@@ -229,35 +234,35 @@
 		}
 
 		select {
-			background-image: svg-url("<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#{_palette($p, border)}' /></svg>");
+			background-image: mixins.svg-url("<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#{functions.palette($p, border)}' /></svg>");
 
 			option {
-				background-color: _palette($p, bg);
-				color: _palette($p, fg);
+				background-color: functions.palette($p, bg);
+				color: functions.palette($p, fg);
 			}
 		}
 
 		.select-wrapper {
 			&:before {
-				color: _palette($p, border);
+				color: functions.palette($p, border);
 			}
 		}
 
 		input[type="checkbox"],
 		input[type="radio"], {
 			& + label {
-				color: _palette($p, fg);
+				color: functions.palette($p, fg);
 
 				&:before {
-					border-color: _palette($p, border);
+					border-color: functions.palette($p, border);
 				}
 			}
 
 			&:checked + label {
 				&:before {
-					background-color: _palette($p, fg-bold);
-					border-color: _palette($p, fg-bold);
-					color: _palette($p, bg);
+					background-color: functions.palette($p, fg-bold);
+					border-color: functions.palette($p, fg-bold);
+					color: functions.palette($p, bg);
 				}
 			}
 
@@ -269,23 +274,23 @@
 		}
 
 		::-webkit-input-placeholder {
-			color: _palette($p, fg-light) !important;
+			color: functions.palette($p, fg-light) !important;
 		}
 
 		:-moz-placeholder {
-			color: _palette($p, fg-light) !important;
+			color: functions.palette($p, fg-light) !important;
 		}
 
 		::-moz-placeholder {
-			color: _palette($p, fg-light) !important;
+			color: functions.palette($p, fg-light) !important;
 		}
 
 		:-ms-input-placeholder {
-			color: _palette($p, fg-light) !important;
+			color: functions.palette($p, fg-light) !important;
 		}
 
 		.formerize-placeholder {
-			color: _palette($p, fg-light) !important;
+			color: functions.palette($p, fg-light) !important;
 		}
 	}
 

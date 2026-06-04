@@ -2,10 +2,10 @@ const {series, watch, src, dest, parallel} = require('gulp');
 const pump = require('pump');
 
 // gulp plugins and utils
-var livereload = require('gulp-livereload');
-var sass = require('gulp-sass')(require('node-sass'));
-var zip = require('gulp-zip').default;
-var beeper = require('beeper');
+const livereload = require('gulp-livereload');
+const sass = require('gulp-sass')(require('sass'));
+const zip = require('gulp-zip').default;
+const beeper = require('beeper');
 
 function serve(done) {
     livereload.listen();
@@ -31,16 +31,16 @@ function hbs(done) {
 function css(done) {
     pump([
         src('./assets/main/sass/*.scss', {sourcemaps: true}),
-        sass({outputStyle: 'compressed'}).on('error', sass.logError),
+        sass({style: 'compressed'}).on('error', sass.logError),
         dest('assets/main/css', {sourcemaps: './'}),
         livereload()
     ], handleError(done));
 }
 
 function zipper(done) {
-    var targetDir = 'dist/';
-    var themeName = require('./package.json').name;
-    var filename = themeName + '.zip';
+    const targetDir = 'dist/';
+    const themeName = require('./package.json').name;
+    const filename = themeName + '.zip';
 
     pump([
         // encoding: false keeps binary assets (fonts, images) as buffers; gulp 5 /

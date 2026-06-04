@@ -1,13 +1,11 @@
 # pnpm v11 requires each dependency build script to be explicitly approved.
 allowBuilds:
-  # node-sass compiles its native LibSass binding on install; the gulp `css` task
-  # renders SCSS through it, so the theme cannot build without this.
-  # NOTE: node-sass is end-of-life — migration to Dart Sass tracked in #357. Once
-  # that lands, this entry goes away.
-  node-sass: true
   # Native file-watching backend used by `gulp dev` (watch) on macOS; optional elsewhere.
   fsevents: true
   # Optional dtrace bindings for bunyan (a gscan dependency); not needed to build/test the theme.
   dtrace-provider: false
   # Postinstall only prints a donation banner; nothing to build.
   es5-ext: false
+  # Native file-watcher bundled by Dart Sass for its own `--watch` CLI; the gulp
+  # build drives watching through gulp-watch/fsevents, so this never needs building.
+  '@parcel/watcher': false

@@ -1,3 +1,5 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -12,7 +14,7 @@
 	}
 
 	table {
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 		width: 100%;
 
 		tbody {
@@ -28,16 +30,16 @@
 		}
 
 		th {
-			font-family: _font(family-heading);
+			font-family: functions.font(family-heading);
 			font-size: 0.8rem;
-			font-weight: _font(weight-heading);
+			font-weight: functions.font(weight-heading);
 			letter-spacing: 0.075em;
 			line-height: 1.5;
 			padding: 0 0.75rem 0.75rem 0.75rem;
 			text-align: left;
 			text-transform: uppercase;
 
-			@include breakpoint('<=medium') {
+			@include breakpoints.breakpoint('<=medium') {
 				font-size: 0.9rem;
 			}
 		}
@@ -87,31 +89,31 @@
 		table {
 			tbody {
 				tr {
-					border-color: _palette($p, border);
+					border-color: functions.palette($p, border);
 
 					&:nth-child(2n + 1) {
-						background-color: _palette($p, border-bg);
+						background-color: functions.palette($p, border-bg);
 					}
 				}
 			}
 
 			th {
-				color: _palette($p, fg-bold);
+				color: functions.palette($p, fg-bold);
 			}
 
 			thead {
-				border-bottom-color: _palette($p, border);
+				border-bottom-color: functions.palette($p, border);
 			}
 
 			tfoot {
-				border-top-color: _palette($p, border);
+				border-top-color: functions.palette($p, border);
 			}
 
 			&.alt {
 				tbody {
 					tr {
 						td {
-							border-color: _palette($p, border);
+							border-color: functions.palette($p, border);
 						}
 					}
 				}

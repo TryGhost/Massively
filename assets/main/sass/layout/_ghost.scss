@@ -1,3 +1,5 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
 // Main
 // --------------------------------------------
 
@@ -22,7 +24,7 @@
 }
 
 .has-serif-title .content [id] {
-    font-family: _font(family);
+    font-family: functions.font(family);
 }
 
 .has-sans-body .content > blockquote,
@@ -30,7 +32,7 @@
 .has-sans-body .content > ul,
 .has-sans-body .content > dl,
 .has-sans-body .content > p {
-    font-family: _font(family-heading);
+    font-family: functions.font(family-heading);
 }
 
 // Pagination
@@ -150,7 +152,7 @@
 }
 
 .author-box-label {
-    font-family: _font(family-heading);
+    font-family: functions.font(family-heading);
     font-size: 0.7rem;
     line-height: 1em;
     font-weight: 300;
@@ -211,17 +213,17 @@ figcaption {
     margin-right: -6rem;
     width: calc(100% + 12rem);
 
-    @include breakpoint('<=large') {
+    @include breakpoints.breakpoint('<=large') {
         margin-left: -4rem;
         margin-right: -4rem;
         width: calc(100% + 8rem);
     }
-    @include breakpoint('<=medium') {
+    @include breakpoints.breakpoint('<=medium') {
         margin-left: -2rem;
         margin-right: -2rem;
         width: calc(100% + 4rem);
     }
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         margin-left: 0;
         margin-right: 0;
         width: 100%;
@@ -234,17 +236,17 @@ figcaption {
     margin-right: -14.1rem;
     width: calc(100% + 28.25rem);
 
-    @include breakpoint('<=large') {
+    @include breakpoints.breakpoint('<=large') {
         margin-left: -8rem;
         margin-right: -8rem;
         width: calc(100% + 16rem);
     }
-    @include breakpoint('<=medium') {
+    @include breakpoints.breakpoint('<=medium') {
         margin-left: -4rem;
         margin-right: -4rem;
         width: calc(100% + 8rem);
     }
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         margin-left: -2rem;
         margin-right: -2rem;
         width: calc(100% + 4rem);
@@ -258,17 +260,17 @@ figcaption {
     margin-right: -6rem;
     width: calc(100% + 12rem);
 
-    @include breakpoint('<=large') {
+    @include breakpoints.breakpoint('<=large') {
         margin-left: -4rem;
         margin-right: -4rem;
         width: calc(100% + 8rem);
     }
-    @include breakpoint('<=medium') {
+    @include breakpoints.breakpoint('<=medium') {
         margin-left: -2rem;
         margin-right: -2rem;
         width: calc(100% + 4rem);
     }
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         margin-left: 0;
         margin-right: 0;
         width: 100%;

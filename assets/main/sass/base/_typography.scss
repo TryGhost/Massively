@@ -1,3 +1,8 @@
+@use "sass:color";
+@use "sass:math";
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
 ///
 /// Massively by HTML5 UP
 /// html5up.net | @ajlkn
@@ -9,36 +14,36 @@
 	html {
 		font-size: 16pt;
 
-		@include breakpoint('<=xlarge') {
+		@include breakpoints.breakpoint('<=xlarge') {
 			font-size: 12pt;
 		}
 
-		@include breakpoint('<=large') {
+		@include breakpoints.breakpoint('<=large') {
 			font-size: 11pt;
 		}
 
-		@include breakpoint('<=xxsmall') {
+		@include breakpoints.breakpoint('<=xxsmall') {
 			font-size: 10pt;
 		}
 	}
 
 	body {
-		color: _palette(fg);
+		color: functions.palette(fg);
 	}
 
 	body, input, select, textarea {
-		font-family: _font(family);
-		font-weight: _font(weight);
+		font-family: functions.font(family);
+		font-weight: functions.font(weight);
 		font-size: 1rem;
 		line-height: 2.375;
 	}
 
 	a {
-		@include vendor('transition', (
-			'color #{_duration(transition)} ease-in-out',
-			'background-color #{_duration(transition)} ease-in-out',
-			'border-color #{_duration(transition)} ease-in-out',
-			'box-shadow #{_duration(transition)} ease-in-out'
+		@include vendor.vendor('transition', (
+			'color #{functions.duration(transition)} ease-in-out',
+			'background-color #{functions.duration(transition)} ease-in-out',
+			'border-color #{functions.duration(transition)} ease-in-out',
+			'box-shadow #{functions.duration(transition)} ease-in-out'
 		));
 		border-bottom: dotted 1px;
 		text-decoration: none;
@@ -49,7 +54,7 @@
 	}
 
 	strong, b {
-		font-weight: _font(weight-bold);
+		font-weight: functions.font(weight-bold);
 	}
 
 	em, i {
@@ -58,16 +63,16 @@
 
 	p {
 		text-align: justify;
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: _font(family-heading);
-		font-weight: _font(weight-heading);
+		font-family: functions.font(family-heading);
+		font-weight: functions.font(weight-heading);
 		line-height: 1.5;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 
 		a {
 			border-bottom: 0;
@@ -79,18 +84,18 @@
 	h1 {
 		font-size: 4rem;
 		line-height: 1.1;
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 	}
 
 	h2 {
 		font-size: 1.75rem;
 		line-height: 1.3;
-		margin: 0 0 (_size(element-margin) * 0.75) 0;
+		margin: 0 0 (functions.size(element-margin) * 0.75) 0;
 	}
 
 	h3 {
 		font-size: 1.25rem;
-		margin: 0 0 (_size(element-margin) * 0.75) 0;
+		margin: 0 0 (functions.size(element-margin) * 0.75) 0;
 	}
 
 	h4 {
@@ -120,14 +125,14 @@
 	blockquote {
 		border-left: solid 4px;
 		font-style: italic;
-		margin: 0 0 _size(element-margin) 0;
-		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+		margin: 0 0 functions.size(element-margin) 0;
+		padding: (math.div(functions.size(element-margin), 4)) 0 (math.div(functions.size(element-margin), 4)) functions.size(element-margin);
 	}
 
 	code {
-		border-radius: _size(border-radius);
+		border-radius: functions.size(border-radius);
 		border: solid 2px;
-		font-family: _font(family-fixed);
+		font-family: functions.font(family-fixed);
 		font-size: 0.9rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
@@ -135,9 +140,9 @@
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: _font(family-fixed);
+		font-family: functions.font(family-fixed);
 		font-size: 0.9rem;
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 functions.size(element-margin) 0;
 
 		code {
 			display: block;
@@ -150,10 +155,10 @@
 	hr {
 		border: 0;
 		border-bottom: solid 2px;
-		margin: (_size(element-margin) * 1.5) 0;
+		margin: (functions.size(element-margin) * 1.5) 0;
 
 		&.major {
-			margin: (_size(element-margin) * 2.5) 0;
+			margin: (functions.size(element-margin) * 2.5) 0;
 		}
 	}
 
@@ -171,16 +176,16 @@
 
 	@mixin color-typography($p: null) {
 		@if $p != null {
-			color: _palette($p, fg);
+			color: functions.palette($p, fg);
 		}
 
 		input, select, textarea {
-			color: _palette($p, fg-bold);
+			color: functions.palette($p, fg-bold);
 		}
 
 		a {
-			color: _palette($p, fg-bold);
-			border-bottom-color: transparentize(_palette($p, fg), 0.5);
+			color: functions.palette($p, fg-bold);
+			border-bottom-color: color.adjust(functions.palette($p, fg), $alpha: -0.5);
 
 			&:hover {
 				border-bottom-color: transparent;
@@ -189,24 +194,24 @@
 		}
 
 		strong, b {
-			color: _palette($p, fg-bold);
+			color: functions.palette($p, fg-bold);
 		}
 
 		h1, h2, h3, h4, h5, h6 {
-			color: _palette($p, fg-bold);
+			color: functions.palette($p, fg-bold);
 		}
 
 		blockquote {
-			border-left-color: _palette($p, border);
+			border-left-color: functions.palette($p, border);
 		}
 
 		code {
-			background: _palette($p, border-bg);
-			border-color: _palette($p, border);
+			background: functions.palette($p, border-bg);
+			border-color: functions.palette($p, border);
 		}
 
 		hr {
-			border-bottom-color: _palette($p, border);
+			border-bottom-color: functions.palette($p, border);
 		}
 	}
 

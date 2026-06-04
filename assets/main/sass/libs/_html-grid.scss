@@ -1,3 +1,7 @@
+@use "sass:list";
+@use "sass:math";
+@use "sass:meta";
+
 // html-grid.scss v1.0 | @ajlkn | MIT licensed */
 
 // Mixins.
@@ -10,12 +14,12 @@
 		// Initialize.
 			$cols: 12;
 			$multipliers: 0, 0.25, 0.5, 1, 1.50, 2.00;
-			$unit: 100% / $cols;
+			$unit: math.div(100%, $cols);
 
 			// Suffixes.
 				$suffixes: null;
 
-				@if (type-of($suffix) == 'list') {
+				@if (meta.type-of($suffix) == 'list') {
 					$suffixes: $suffix;
 				}
 				@else {
@@ -26,10 +30,10 @@
 				$guttersCols: null;
 				$guttersRows: null;
 
-				@if (type-of($gutters) == 'list') {
+				@if (meta.type-of($gutters) == 'list') {
 
-					$guttersCols: nth($gutters, 1);
-					$guttersRows: nth($gutters, 2);
+					$guttersCols: list.nth($gutters, 1);
+					$guttersRows: list.nth($gutters, 2);
 
 				}
 				@else {

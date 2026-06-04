@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Misc.
 	$misc: (
 		z-index-base:		10000
@@ -34,8 +36,8 @@
 		bg:					#ffffff,
 		fg:					#212931,
 		fg-bold:			#212931,
-		fg-light:			mix(#212931, #ffffff, 50%),
-		border:				mix(#dcdcdc, #ffffff, 50%),
+		fg-light:			color.mix(#212931, #ffffff, 50%),
+		border:				color.mix(#dcdcdc, #ffffff, 50%),
 		border-bg:			rgba(#dcdcdc, 0.25),
 		accent:				#18bfef,
 
@@ -43,8 +45,8 @@
 			bg:				#f5f5f5,
 			fg:				#717981,
 			fg-bold:		#717981,
-			fg-light:		mix(#717981, #f5f5f5, 50%),
-			border:			mix(#dcdcdc, #f5f5f5, 75%),
+			fg-light:		color.mix(#717981, #f5f5f5, 50%),
+			border:			color.mix(#dcdcdc, #f5f5f5, 75%),
 			border-bg:		rgba(#dcdcdc, 0.5),
 			accent:			#18bfef,
 		),

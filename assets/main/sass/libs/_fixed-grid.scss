@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "vendor";
+
 // fixed-grid.scss v1.0 | @ajlkn | MIT licensed */
 
 // Mixins.
@@ -8,21 +13,21 @@
 	@mixin fixed-grid-base($vertical-align: null, $horizontal-align: null) {
 
 		// Grid.
-			@include vendor('display', 'flex');
-			@include vendor('flex-wrap', 'wrap');
+			@include vendor.vendor('display', 'flex');
+			@include vendor.vendor('flex-wrap', 'wrap');
 
 			// Vertical alignment.
 				@if ($vertical-align == top) {
-					@include vendor('align-items', 'flex-start');
+					@include vendor.vendor('align-items', 'flex-start');
 				}
 				@else if ($vertical-align == bottom) {
-					@include vendor('align-items', 'flex-end');
+					@include vendor.vendor('align-items', 'flex-end');
 				}
 				@else if ($vertical-align == center) {
-					@include vendor('align-items', 'center');
+					@include vendor.vendor('align-items', 'center');
 				}
 				@else {
-					@include vendor('align-items', 'stretch');
+					@include vendor.vendor('align-items', 'stretch');
 				}
 
 			// Horizontal alignment.
@@ -32,8 +37,8 @@
 
 		// Cells.
 			> * {
-				@include vendor('flex-shrink', '1');
-				@include vendor('flex-grow', '0');
+				@include vendor.vendor('flex-shrink', '1');
+				@include vendor.vendor('flex-grow', '0');
 			}
 
 	}
@@ -43,7 +48,7 @@
 	@mixin fixed-grid-columns($columns) {
 
 		> * {
-			$cell-width: 100% / $columns;
+			$cell-width: math.div(100%, $columns);
 			width: #{$cell-width};
 		}
 
@@ -56,7 +61,7 @@
 
 		// Apply padding.
 			> * {
-				$cell-width: 100% / $columns;
+				$cell-width: math.div(100%, $columns);
 
 				padding: ($gutters * 0.5);
 				width: $cell-width;
@@ -71,8 +76,8 @@
 
 		// Apply padding.
 			> * {
-				$cell-width: 100% / $columns;
-				$cell-width-pad: $gutters / $columns;
+				$cell-width: math.div(100%, $columns);
+				$cell-width-pad: math.div($gutters, $columns);
 
 				padding: ($gutters * 0.5);
 				width: calc(#{$cell-width} + #{$cell-width-pad});
@@ -99,8 +104,8 @@
 		// Adjust widths of leftmost and rightmost cells.
 			> :nth-child(#{$columns}n + 1),
 			> :nth-child(#{$columns}n) {
-				$cell-width: 100% / $columns;
-				$cell-width-pad: ($gutters / $columns) - ($gutters / 2);
+				$cell-width: math.div(100%, $columns);
+				$cell-width-pad: math.div($gutters, $columns) - math.div($gutters, 2);
 
 				width: calc(#{$cell-width} + #{$cell-width-pad});
 			}
@@ -116,8 +121,8 @@
 
 		// Apply padding.
 			> * {
-				$cell-width: 100% / $prev-columns;
-				$cell-width-pad: $gutters / $prev-columns;
+				$cell-width: math.div(100%, $prev-columns);
+				$cell-width-pad: math.div($gutters, $prev-columns);
 
 				padding: ($gutters * 0.5);
 				width: calc(#{$cell-width} + #{$cell-width-pad});
@@ -144,8 +149,8 @@
 		// Adjust widths of leftmost and rightmost cells.
 			> :nth-child(#{$prev-columns}n + 1),
 			> :nth-child(#{$prev-columns}n) {
-				$cell-width: 100% / $columns;
-				$cell-width-pad: $gutters / $columns;
+				$cell-width: math.div(100%, $columns);
+				$cell-width-pad: math.div($gutters, $columns);
 
 				padding: ($gutters * 0.5);
 				width: calc(#{$cell-width} + #{$cell-width-pad});
@@ -181,43 +186,43 @@
 			// Debug.
 				$debug: false;
 
-				@if (map-has-key($settings, 'debug')) {
-					$debug: map-get($settings, 'debug');
+				@if (map.has-key($settings, 'debug')) {
+					$debug: map.get($settings, 'debug');
 				}
 
 			// Vertical align.
 				$vertical-align: null;
 
-				@if (map-has-key($settings, 'vertical-align')) {
-					$vertical-align: map-get($settings, 'vertical-align');
+				@if (map.has-key($settings, 'vertical-align')) {
+					$vertical-align: map.get($settings, 'vertical-align');
 				}
 
 			// Horizontal align.
 				$horizontal-align: null;
 
-				@if (map-has-key($settings, 'horizontal-align')) {
-					$horizontal-align: map-get($settings, 'horizontal-align');
+				@if (map.has-key($settings, 'horizontal-align')) {
+					$horizontal-align: map.get($settings, 'horizontal-align');
 				}
 
 			// Columns.
 				$columns: null;
 
-				@if (map-has-key($settings, 'columns')) {
-					$columns: map-get($settings, 'columns');
+				@if (map.has-key($settings, 'columns')) {
+					$columns: map.get($settings, 'columns');
 				}
 
 			// Gutters.
 				$gutters: 0;
 
-				@if (map-has-key($settings, 'gutters')) {
-					$gutters: map-get($settings, 'gutters');
+				@if (map.has-key($settings, 'gutters')) {
+					$gutters: map.get($settings, 'gutters');
 				}
 
 			// Flush.
 				$flush: true;
 
-				@if (map-has-key($settings, 'flush')) {
-					$flush: map-get($settings, 'flush');
+				@if (map.has-key($settings, 'flush')) {
+					$flush: map.get($settings, 'flush');
 				}
 
 		// Initialize base grid.
@@ -271,29 +276,29 @@
 			// Columns.
 				$columns: 1;
 
-				@if (map-has-key($settings, 'columns')) {
-					$columns: map-get($settings, 'columns');
+				@if (map.has-key($settings, 'columns')) {
+					$columns: map.get($settings, 'columns');
 				}
 
 			// Gutters.
 				$gutters: 0;
 
-				@if (map-has-key($settings, 'gutters')) {
-					$gutters: map-get($settings, 'gutters');
+				@if (map.has-key($settings, 'gutters')) {
+					$gutters: map.get($settings, 'gutters');
 				}
 
 			// Previous columns.
 				$prev-columns: false;
 
-				@if (map-has-key($settings, 'prev-columns')) {
-					$prev-columns: map-get($settings, 'prev-columns');
+				@if (map.has-key($settings, 'prev-columns')) {
+					$prev-columns: map.get($settings, 'prev-columns');
 				}
 
 			// Flush.
 				$flush: true;
 
-				@if (map-has-key($settings, 'flush')) {
-					$flush: map-get($settings, 'flush');
+				@if (map.has-key($settings, 'flush')) {
+					$flush: map.get($settings, 'flush');
 				}
 
 		// Resize columns.
@@ -309,7 +314,7 @@
 							@if ($prev-columns) {
 
 								// Convert to list if it isn't one already.
-									@if (type-of($prev-columns) != list) {
+									@if (meta.type-of($prev-columns) != list) {
 										$prev-columns: ($prev-columns);
 									}
 
