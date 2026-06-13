@@ -20,7 +20,7 @@
         "pretest:ci": "pnpm zip",
         "test:ci": "gscan --fatal --verbose ."
     },
-    "packageManager": "pnpm@11.5.2",
+    "packageManager": "pnpm@11.5.3",
     "author": {
         "name": "Ghost Foundation",
         "email": "hello@ghost.org",
