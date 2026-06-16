@@ -50,7 +50,9 @@ function zipper(done) {
             '!node_modules', '!node_modules/**',
             '!dist', '!dist/**',
             '!pnpm-lock.yaml',
-            '!pnpm-workspace.yaml'
+            '!pnpm-workspace.yaml',
+            '!AGENTS.md',
+            '!CLAUDE.md',
         ], {encoding: false}),
         zip(filename),
         dest(targetDir)
