@@ -13,28 +13,28 @@ importers:
         version: 2.1.0
       gscan:
         specifier: 6.4.2
-        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+        version: 6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       gulp:
         specifier: 5.0.1
         version: 5.0.1
       gulp-livereload:
         specifier: 4.0.2
-        version: 4.0.2
+        version: 4.0.2(supports-color@7.2.0)
       gulp-sass:
         specifier: 6.0.1
         version: 6.0.1
       gulp-sourcemaps:
         specifier: 3.0.0
-        version: 3.0.0
+        version: 3.0.0(supports-color@7.2.0)
       gulp-watch:
         specifier: 5.0.1
-        version: 5.0.1
+        version: 5.0.1(supports-color@7.2.0)
       gulp-zip:
         specifier: 6.1.0
         version: 6.1.0(gulp@5.0.1)
       sass:
-        specifier: 1.101.0
-        version: 1.101.0
+        specifier: 1.101.3
+        version: 1.101.3
 
 packages:
 
@@ -2143,8 +2143,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.101.0:
-    resolution: {integrity: sha512-OL3GoQyoUdDt843DpVmDO6y2k1sc5IhUDSpu8XucEI+35neq5QivZ1iuegnpraEVTJXlQGK1gl27zKcTLEPbQw==}
+  sass@1.101.3:
+    resolution: {integrity: sha512-Z1lLHhtAII+dyLNIQB6JQTZMy7sDxk3f5NzbINRc9ks1P0HCGvSuKev0wUhULFpLSaHBIMZrcTs9WDQUZerrgA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -2600,30 +2600,30 @@ snapshots:
       semifies: 1.0.0
       source-map: 0.6.1
 
-  '@apm-js-collab/tracing-hooks@0.10.1':
+  '@apm-js-collab/tracing-hooks@0.10.1(supports-color@7.2.0)':
     dependencies:
       '@apm-js-collab/code-transformer': 0.15.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       module-details-from-path: 1.0.4
     transitivePeerDependencies:
       - supports-color
 
   '@babel/runtime@7.29.7': {}
 
-  '@elastic/elasticsearch@8.19.1':
+  '@elastic/elasticsearch@8.19.1(supports-color@7.2.0)':
     dependencies:
-      '@elastic/transport': 8.10.1
+      '@elastic/transport': 8.10.1(supports-color@7.2.0)
       apache-arrow: 21.1.0
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@75lb/nature'
       - supports-color
 
-  '@elastic/transport@8.10.1':
+  '@elastic/transport@8.10.1(supports-color@7.2.0)':
     dependencies:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/core': 2.8.0(@opentelemetry/api@1.9.1)
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       hpagent: 1.2.0
       ms: 2.1.3
       secure-json-parse: 3.0.2
@@ -2673,12 +2673,12 @@ snapshots:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/semantic-conventions': 1.41.1
 
-  '@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1)':
+  '@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0)':
     dependencies:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/api-logs': 0.220.0
       import-in-the-middle: 3.1.0
-      require-in-the-middle: 8.0.1
+      require-in-the-middle: 8.0.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2774,7 +2774,7 @@ snapshots:
     dependencies:
       '@sentry/conventions': 0.15.1
 
-  '@sentry/node-core@10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))':
+  '@sentry/node-core@10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))':
     dependencies:
       '@sentry/conventions': 0.15.1
       '@sentry/core': 10.65.0
@@ -2783,19 +2783,19 @@ snapshots:
     optionalDependencies:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/core': 2.9.0(@opentelemetry/api@1.9.1)
-      '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)
+      '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0)
       '@opentelemetry/sdk-trace-base': 2.9.0(@opentelemetry/api@1.9.1)
 
-  '@sentry/node@10.65.0(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))':
+  '@sentry/node@10.65.0(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)':
     dependencies:
       '@opentelemetry/api': 1.9.1
-      '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)
+      '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0)
       '@opentelemetry/sdk-trace-base': 2.9.0(@opentelemetry/api@1.9.1)
       '@sentry/conventions': 0.15.1
       '@sentry/core': 10.65.0
-      '@sentry/node-core': 10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))
+      '@sentry/node-core': 10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/instrumentation@0.220.0(@opentelemetry/api@1.9.1)(supports-color@7.2.0))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))
       '@sentry/opentelemetry': 10.65.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.9.0(@opentelemetry/api@1.9.1))
-      '@sentry/server-utils': 10.65.0
+      '@sentry/server-utils': 10.65.0(supports-color@7.2.0)
       import-in-the-middle: 3.1.0
     transitivePeerDependencies:
       - '@opentelemetry/core'
@@ -2810,11 +2810,11 @@ snapshots:
       '@sentry/conventions': 0.15.1
       '@sentry/core': 10.65.0
 
-  '@sentry/server-utils@10.65.0':
+  '@sentry/server-utils@10.65.0(supports-color@7.2.0)':
     dependencies:
       '@apm-js-collab/code-transformer': 0.15.0
       '@apm-js-collab/code-transformer-bundler-plugins': 0.5.0
-      '@apm-js-collab/tracing-hooks': 0.10.1
+      '@apm-js-collab/tracing-hooks': 0.10.1(supports-color@7.2.0)
       '@sentry/conventions': 0.15.1
       '@sentry/core': 10.65.0
       magic-string: 0.30.21
@@ -2836,17 +2836,17 @@ snapshots:
       '@tryghost/root-utils': 2.3.1
       nconf: 0.13.0
 
-  '@tryghost/debug@2.3.1':
+  '@tryghost/debug@2.3.1(supports-color@7.2.0)':
     dependencies:
       '@tryghost/root-utils': 2.3.1
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@tryghost/elasticsearch@5.3.1':
+  '@tryghost/elasticsearch@5.3.1(supports-color@7.2.0)':
     dependencies:
-      '@elastic/elasticsearch': 8.19.1
-      '@tryghost/debug': 2.3.1
+      '@elastic/elasticsearch': 8.19.1(supports-color@7.2.0)
+      '@tryghost/debug': 2.3.1(supports-color@7.2.0)
       split2: 4.2.0
     transitivePeerDependencies:
       - '@75lb/nature'
@@ -2859,10 +2859,10 @@ snapshots:
       '@tryghost/errors': 3.3.1
       '@tryghost/request': 3.3.1
 
-  '@tryghost/logging@5.1.1':
+  '@tryghost/logging@5.1.1(supports-color@7.2.0)':
     dependencies:
       '@tryghost/bunyan-rotating-filestream': 0.0.7
-      '@tryghost/elasticsearch': 5.3.1
+      '@tryghost/elasticsearch': 5.3.1(supports-color@7.2.0)
       '@tryghost/http-stream': 2.3.1
       '@tryghost/pretty-stream': 2.3.1
       '@tryghost/root-utils': 2.3.1
@@ -2875,9 +2875,9 @@ snapshots:
       - '@75lb/nature'
       - supports-color
 
-  '@tryghost/mongo-knex@0.10.1':
+  '@tryghost/mongo-knex@0.10.1(supports-color@7.2.0)':
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       lodash: 4.18.1
     transitivePeerDependencies:
       - supports-color
@@ -2890,9 +2890,9 @@ snapshots:
     dependencies:
       date-fns: 2.30.0
 
-  '@tryghost/nql@0.13.1':
+  '@tryghost/nql@0.13.1(supports-color@7.2.0)':
     dependencies:
-      '@tryghost/mongo-knex': 0.10.1
+      '@tryghost/mongo-knex': 0.10.1(supports-color@7.2.0)
       '@tryghost/mongo-utils': 0.6.5
       '@tryghost/nql-lang': 0.6.6
       lodash: 4.18.1
@@ -2925,10 +2925,10 @@ snapshots:
       caller: 1.1.0
       find-root: 1.1.0
 
-  '@tryghost/server@3.1.1':
+  '@tryghost/server@3.1.1(supports-color@7.2.0)':
     dependencies:
-      '@tryghost/debug': 2.3.1
-      '@tryghost/logging': 5.1.1
+      '@tryghost/debug': 2.3.1(supports-color@7.2.0)
+      '@tryghost/logging': 5.1.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - '@75lb/nature'
       - supports-color
@@ -2948,11 +2948,11 @@ snapshots:
       '@tryghost/root-utils': 2.3.1
       semver: 7.8.5
 
-  '@tryghost/zip@3.5.0':
+  '@tryghost/zip@3.5.0(supports-color@7.2.0)':
     dependencies:
       '@tryghost/errors': 3.3.1
       archiver: 8.0.0
-      extract-zip: 2.0.1
+      extract-zip: 2.0.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - bare-abort-controller
       - bare-buffer
@@ -3029,9 +3029,9 @@ snapshots:
       micromatch: 2.3.11
       normalize-path: 2.1.1
 
-  anymatch@2.0.0:
+  anymatch@2.0.0(supports-color@7.2.0):
     dependencies:
-      micromatch: 3.1.10
+      micromatch: 3.1.10(supports-color@7.2.0)
       normalize-path: 2.1.1
     transitivePeerDependencies:
       - supports-color
@@ -3190,11 +3190,11 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  body-parser@2.3.0:
+  body-parser@2.3.0(supports-color@7.2.0):
     dependencies:
       bytes: 3.1.2
       content-type: 2.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       http-errors: 2.0.1
       iconv-lite: 0.7.2
       on-finished: 2.4.1
@@ -3227,7 +3227,7 @@ snapshots:
       preserve: 0.2.0
       repeat-element: 1.1.4
 
-  braces@2.3.2:
+  braces@2.3.2(supports-color@7.2.0):
     dependencies:
       arr-flatten: 1.1.0
       array-unique: 0.3.2
@@ -3235,7 +3235,7 @@ snapshots:
       fill-range: 4.0.0
       isobject: 3.0.1
       repeat-element: 1.1.4
-      snapdragon: 0.8.2
+      snapdragon: 0.8.2(supports-color@7.2.0)
       snapdragon-node: 2.1.1
       split-string: 3.1.0
       to-regex: 3.0.2
@@ -3327,18 +3327,18 @@ snapshots:
 
   chalk@5.6.2: {}
 
-  chokidar@2.1.8:
+  chokidar@2.1.8(supports-color@7.2.0):
     dependencies:
-      anymatch: 2.0.0
+      anymatch: 2.0.0(supports-color@7.2.0)
       async-each: 1.0.6
-      braces: 2.3.2
+      braces: 2.3.2(supports-color@7.2.0)
       glob-parent: 3.1.0
       inherits: 2.0.4
       is-binary-path: 1.0.1
       is-glob: 4.0.3
       normalize-path: 3.0.0
       path-is-absolute: 1.0.1
-      readdirp: 2.2.1
+      readdirp: 2.2.1(supports-color@7.2.0)
       upath: 1.2.0
     optionalDependencies:
       fsevents: 1.2.13
@@ -3502,25 +3502,31 @@ snapshots:
 
   date-format@4.0.14: {}
 
-  debug-fabulous@1.1.0:
+  debug-fabulous@1.1.0(supports-color@7.2.0):
     dependencies:
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       memoizee: 0.4.17
       object-assign: 4.1.1
     transitivePeerDependencies:
       - supports-color
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@7.2.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@3.2.7:
+  debug@3.2.7(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   decode-uri-component@0.2.2: {}
 
@@ -3657,14 +3663,14 @@ snapshots:
     dependencies:
       is-posix-bracket: 0.1.1
 
-  expand-brackets@2.1.4:
+  expand-brackets@2.1.4(supports-color@7.2.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@7.2.0)
       define-property: 0.2.5
       extend-shallow: 2.0.1
       posix-character-classes: 0.1.1
       regex-not: 1.0.2
-      snapdragon: 0.8.2
+      snapdragon: 0.8.2(supports-color@7.2.0)
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -3683,20 +3689,20 @@ snapshots:
       graceful-fs: 4.2.11
       handlebars: 4.7.9
 
-  express@5.2.1:
+  express@5.2.1(supports-color@7.2.0):
     dependencies:
       accepts: 2.0.0
-      body-parser: 2.3.0
+      body-parser: 2.3.0(supports-color@7.2.0)
       content-disposition: 1.1.0
       content-type: 1.0.5
       cookie: 0.7.2
       cookie-signature: 1.2.2
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 2.1.1
+      finalhandler: 2.1.1(supports-color@7.2.0)
       fresh: 2.0.0
       http-errors: 2.0.1
       merge-descriptors: 2.0.0
@@ -3707,9 +3713,9 @@ snapshots:
       proxy-addr: 2.0.7
       qs: 6.15.2
       range-parser: 1.2.1
-      router: 2.2.0
-      send: 1.2.1
-      serve-static: 2.2.1
+      router: 2.2.0(supports-color@7.2.0)
+      send: 1.2.1(supports-color@7.2.0)
+      serve-static: 2.2.1(supports-color@7.2.0)
       statuses: 2.0.2
       type-is: 2.1.0
       vary: 1.1.2
@@ -3735,22 +3741,22 @@ snapshots:
     dependencies:
       is-extglob: 1.0.0
 
-  extglob@2.0.4:
+  extglob@2.0.4(supports-color@7.2.0):
     dependencies:
       array-unique: 0.3.2
       define-property: 1.0.0
-      expand-brackets: 2.1.4
+      expand-brackets: 2.1.4(supports-color@7.2.0)
       extend-shallow: 2.0.1
       fragment-cache: 0.2.1
       regex-not: 1.0.2
-      snapdragon: 0.8.2
+      snapdragon: 0.8.2(supports-color@7.2.0)
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
 
-  extract-zip@2.0.1:
+  extract-zip@2.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -3815,9 +3821,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@2.1.1:
+  finalhandler@2.1.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -4042,19 +4048,19 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  gscan@6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1)):
+  gscan@6.4.2(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0):
     dependencies:
-      '@sentry/node': 10.65.0(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))
+      '@sentry/node': 10.65.0(@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       '@tryghost/config': 2.3.1
-      '@tryghost/debug': 2.3.1
+      '@tryghost/debug': 2.3.1(supports-color@7.2.0)
       '@tryghost/errors': 3.3.1
-      '@tryghost/logging': 5.1.1
-      '@tryghost/nql': 0.13.1
+      '@tryghost/logging': 5.1.1(supports-color@7.2.0)
+      '@tryghost/nql': 0.13.1(supports-color@7.2.0)
       '@tryghost/pretty-cli': 3.3.1
-      '@tryghost/server': 3.1.1
-      '@tryghost/zip': 3.5.0
+      '@tryghost/server': 3.1.1(supports-color@7.2.0)
+      '@tryghost/zip': 3.5.0(supports-color@7.2.0)
       chalk: 5.6.2
-      express: 5.2.1
+      express: 5.2.1(supports-color@7.2.0)
       express-handlebars: 8.0.1
       glob: 13.0.6
       handlebars: 4.7.9
@@ -4086,14 +4092,14 @@ snapshots:
       v8flags: 4.0.1
       yargs: 16.2.2
 
-  gulp-livereload@4.0.2:
+  gulp-livereload@4.0.2(supports-color@7.2.0):
     dependencies:
       chalk: 2.4.2
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       fancy-log: 1.3.3
       lodash.assign: 4.2.0
       readable-stream: 3.6.2
-      tiny-lr: 1.1.1
+      tiny-lr: 1.1.1(supports-color@7.2.0)
       vinyl: 2.2.1
     transitivePeerDependencies:
       - supports-color
@@ -4113,14 +4119,14 @@ snapshots:
       strip-ansi: 6.0.1
       vinyl-sourcemaps-apply: 0.2.1
 
-  gulp-sourcemaps@3.0.0:
+  gulp-sourcemaps@3.0.0(supports-color@7.2.0):
     dependencies:
       '@gulp-sourcemaps/identity-map': 2.0.1
       '@gulp-sourcemaps/map-sources': 1.0.0
       acorn: 6.4.2
       convert-source-map: 1.9.0
       css: 3.0.0
-      debug-fabulous: 1.1.0
+      debug-fabulous: 1.1.0(supports-color@7.2.0)
       detect-newline: 2.1.0
       graceful-fs: 4.2.11
       source-map: 0.6.1
@@ -4129,11 +4135,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  gulp-watch@5.0.1:
+  gulp-watch@5.0.1(supports-color@7.2.0):
     dependencies:
       ansi-colors: 1.1.0
       anymatch: 1.3.2
-      chokidar: 2.1.8
+      chokidar: 2.1.8(supports-color@7.2.0)
       fancy-log: 1.3.2
       glob-parent: 3.1.0
       object-assign: 4.1.1
@@ -4504,20 +4510,20 @@ snapshots:
       parse-glob: 3.0.4
       regex-cache: 0.4.4
 
-  micromatch@3.1.10:
+  micromatch@3.1.10(supports-color@7.2.0):
     dependencies:
       arr-diff: 4.0.0
       array-unique: 0.3.2
-      braces: 2.3.2
+      braces: 2.3.2(supports-color@7.2.0)
       define-property: 2.0.2
       extend-shallow: 3.0.2
-      extglob: 2.0.4
+      extglob: 2.0.4(supports-color@7.2.0)
       fragment-cache: 0.2.1
       kind-of: 6.0.3
-      nanomatch: 1.2.13
+      nanomatch: 1.2.13(supports-color@7.2.0)
       object.pick: 1.3.0
       regex-not: 1.0.2
-      snapdragon: 0.8.2
+      snapdragon: 0.8.2(supports-color@7.2.0)
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -4597,7 +4603,7 @@ snapshots:
   nan@2.27.0:
     optional: true
 
-  nanomatch@1.2.13:
+  nanomatch@1.2.13(supports-color@7.2.0):
     dependencies:
       arr-diff: 4.0.0
       array-unique: 0.3.2
@@ -4608,7 +4614,7 @@ snapshots:
       kind-of: 6.0.3
       object.pick: 1.3.0
       regex-not: 1.0.2
-      snapdragon: 0.8.2
+      snapdragon: 0.8.2(supports-color@7.2.0)
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -4836,10 +4842,10 @@ snapshots:
     dependencies:
       minimatch: 10.2.5
 
-  readdirp@2.2.1:
+  readdirp@2.2.1(supports-color@7.2.0):
     dependencies:
       graceful-fs: 4.2.11
-      micromatch: 3.1.10
+      micromatch: 3.1.10(supports-color@7.2.0)
       readable-stream: 2.3.8
     transitivePeerDependencies:
       - supports-color
@@ -4879,9 +4885,9 @@ snapshots:
 
   require-directory@2.1.1: {}
 
-  require-in-the-middle@8.0.1:
+  require-in-the-middle@8.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       module-details-from-path: 1.0.4
     transitivePeerDependencies:
       - supports-color
@@ -4919,9 +4925,9 @@ snapshots:
       glob: 6.0.4
     optional: true
 
-  router@2.2.0:
+  router@2.2.0(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       depd: 2.0.0
       is-promise: 4.0.0
       parseurl: 1.3.3
@@ -4944,7 +4950,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.101.0:
+  sass@1.101.3:
     dependencies:
       chokidar: 5.0.0
       immutable: 5.1.6
@@ -4967,9 +4973,9 @@ snapshots:
 
   semver@7.8.5: {}
 
-  send@1.2.1:
+  send@1.2.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
@@ -4983,12 +4989,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@2.2.1:
+  serve-static@2.2.1(supports-color@7.2.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 1.2.1
+      send: 1.2.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5049,10 +5055,10 @@ snapshots:
     dependencies:
       kind-of: 3.2.2
 
-  snapdragon@0.8.2:
+  snapdragon@0.8.2(supports-color@7.2.0):
     dependencies:
       base: 0.11.2
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@7.2.0)
       define-property: 0.2.5
       extend-shallow: 2.0.1
       map-cache: 0.2.2
@@ -5213,10 +5219,10 @@ snapshots:
       es5-ext: 0.10.64
       next-tick: 1.1.0
 
-  tiny-lr@1.1.1:
+  tiny-lr@1.1.1(supports-color@7.2.0):
     dependencies:
       body: 5.1.0
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       faye-websocket: 0.10.0
       livereload-js: 2.4.0
       object-assign: 4.1.1

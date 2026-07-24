@@ -59,7 +59,7 @@
         "gulp-sourcemaps": "3.0.0",
         "gulp-watch": "5.0.1",
         "gulp-zip": "6.1.0",
-        "sass": "1.101.0"
+        "sass": "1.101.3"
     },
     "config": {
         "posts_per_page": 12,
